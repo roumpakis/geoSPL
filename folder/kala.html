@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_19b026c4b718f59d0cca4816ff3e54cf {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_19b026c4b718f59d0cca4816ff3e54cf" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_19b026c4b718f59d0cca4816ff3e54cf = L.map(
+                "map_19b026c4b718f59d0cca4816ff3e54cf",
+                {
+                    center: [-64.674378, -12.323921],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_787bfe5b8f7374f2a634912abb4b6299 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+                tile_layer_787bfe5b8f7374f2a634912abb4b6299.addTo(map_19b026c4b718f59d0cca4816ff3e54cf);
+    
+            var polygon_23a99e9bf7ecba2a6a4257f594aa3a62 = L.polygon(
+                [[-16.681021, -67.714826], [-14.166161, -67.714826], [-14.166161, -64.885632], [-16.681021, -64.885632], [-16.681021, -67.714826]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_19b026c4b718f59d0cca4816ff3e54cf);
+        
+    
+        var popup_a13a0790d6683cabf8af4f5b0afed4e8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9e155257c715e93d1336d928b83afa89 = $(`<div id="html_9e155257c715e93d1336d928b83afa89" style="width: 100.0%; height: 100.0%;">EMSR709 - Wildfires in Bolivia On the 20 November 2023, a wildfire is reported to have affected Bolivia. The event is on-going and spreading with damage expected to affect forests and urban areas. Copernicus EMS Rapid Mapping is requested to provide initial rough estimation and wildfire extent emergency mapping. Roads [km]: 1  max_extent: -  Built-up [ha]: 1.4  Built-up [No.]: -  Population [No.]: -</div>`)[0];
+                popup_a13a0790d6683cabf8af4f5b0afed4e8.setContent(html_9e155257c715e93d1336d928b83afa89);
+            
+        
+
+        polygon_23a99e9bf7ecba2a6a4257f594aa3a62.bindPopup(popup_a13a0790d6683cabf8af4f5b0afed4e8)
+        ;
+
+        
+    
+    
+            var polygon_7659c95e248d7538c6610180ba574bf9 = L.polygon(
+                [[-15.124687, -66.535179], [-15.25934, -66.937196], [-15.185741, -66.971589], [-15.159908, -67.088529], [-15.077939, -67.157123], [-14.88947, -67.314551], [-14.804164, -67.385677], [-14.799609, -67.388932], [-14.742727, -67.418724], [-14.687466, -67.489552], [-14.624421, -67.535279], [-14.675012, -67.57439], [-14.72249, -67.585287], [-14.739566, -67.599452], [-14.712089, -67.606059], [-14.255001, -67.714826], [-14.166161, -67.094364], [-15.124687, -66.535179]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_19b026c4b718f59d0cca4816ff3e54cf);
+        
+    
+        var popup_1ff0ef5675297c652a3051195b0fdab9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0c82882ac12e2f9b77effee254ff7639 = $(`<div id="html_0c82882ac12e2f9b77effee254ff7639" style="width: 100.0%; height: 100.0%;">EMSR709-Pilón Lajas</div>`)[0];
+                popup_1ff0ef5675297c652a3051195b0fdab9.setContent(html_0c82882ac12e2f9b77effee254ff7639);
+            
+        
+
+        polygon_7659c95e248d7538c6610180ba574bf9.bindPopup(popup_1ff0ef5675297c652a3051195b0fdab9)
+        ;
+
+        
+    
+    
+            var polygon_4675ec3bc2b1d3cd36d2d3e5938af605 = L.polygon(
+                [[-15.904417, -66.117517], [-15.648014, -65.319403], [-16.237095, -64.885632], [-16.681021, -65.480629], [-15.904417, -66.117517]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_19b026c4b718f59d0cca4816ff3e54cf);
+        
+    
+        var popup_a5d5d2ffa326ce01b5375f3446806d5c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e6e78807e7b25f18035dc0cb2861b6d3 = $(`<div id="html_e6e78807e7b25f18035dc0cb2861b6d3" style="width: 100.0%; height: 100.0%;">EMSR709-Isiboro Park</div>`)[0];
+                popup_a5d5d2ffa326ce01b5375f3446806d5c.setContent(html_e6e78807e7b25f18035dc0cb2861b6d3);
+            
+        
+
+        polygon_4675ec3bc2b1d3cd36d2d3e5938af605.bindPopup(popup_a5d5d2ffa326ce01b5375f3446806d5c)
+        ;
+
+        
+    
+</script>
+</html>

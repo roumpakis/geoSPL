@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_122ad766e60b0622f6421176fc6bc8c4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_122ad766e60b0622f6421176fc6bc8c4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_122ad766e60b0622f6421176fc6bc8c4 = L.map(
+                "map_122ad766e60b0622f6421176fc6bc8c4",
+                {
+                    center: [0.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_780c5f9e42473819fa0c7ba5d35eeb0c = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+                tile_layer_780c5f9e42473819fa0c7ba5d35eeb0c.addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+    
+            var polygon_e33800f5eb17c07908fda4d47d3d33bb = L.polygon(
+                [[-16.681021, -67.714826], [-14.166161, -67.714826], [-14.166161, -64.885632], [-16.681021, -64.885632], [-16.681021, -67.714826]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_1d7fdb75c40bdb42e06c6b20331e925a = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_0c9a8b3fc479335b7e990bda83080f78 = $(`<div id="html_0c9a8b3fc479335b7e990bda83080f78" style="width: 100.0%; height: 100.0%;"><b>EMSR709 - Wildfires in Bolivia</b><br><br>On the 20 November 2023, a wildfire is reported to have affected Bolivia. The event is on-going and spreading with damage expected to affect forests and urban areas. Copernicus EMS Rapid Mapping is requested to provide initial rough estimation and wildfire extent emergency mapping.<br><br><b>Roads [km]:</b> 1<br><b>max_extent:</b> -<br><b>Built-up [ha]:</b> 1.4<br><b>Built-up [No.]:</b> -<br><b>Population [No.]:</b> -</div>`)[0];
+                popup_1d7fdb75c40bdb42e06c6b20331e925a.setContent(html_0c9a8b3fc479335b7e990bda83080f78);
+            
+        
+
+        polygon_e33800f5eb17c07908fda4d47d3d33bb.bindPopup(popup_1d7fdb75c40bdb42e06c6b20331e925a)
+        ;
+
+        
+    
+    
+            var polygon_13b3a8cb250ea02afe236676425d8586 = L.polygon(
+                [[-15.124687, -66.535179], [-15.25934, -66.937196], [-15.185741, -66.971589], [-15.159908, -67.088529], [-15.077939, -67.157123], [-14.88947, -67.314551], [-14.804164, -67.385677], [-14.799609, -67.388932], [-14.742727, -67.418724], [-14.687466, -67.489552], [-14.624421, -67.535279], [-14.675012, -67.57439], [-14.72249, -67.585287], [-14.739566, -67.599452], [-14.712089, -67.606059], [-14.255001, -67.714826], [-14.166161, -67.094364], [-15.124687, -66.535179]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_9f748c3451dd5ab9e70a4ff085b943b1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_47bc3a0793b77d24677d42908d1fd0ce = $(`<div id="html_47bc3a0793b77d24677d42908d1fd0ce" style="width: 100.0%; height: 100.0%;">EMSR709-Pilón Lajas</div>`)[0];
+                popup_9f748c3451dd5ab9e70a4ff085b943b1.setContent(html_47bc3a0793b77d24677d42908d1fd0ce);
+            
+        
+
+        polygon_13b3a8cb250ea02afe236676425d8586.bindPopup(popup_9f748c3451dd5ab9e70a4ff085b943b1)
+        ;
+
+        
+    
+    
+            var polygon_7d00f04d842329db526178a2cf2b7a24 = L.polygon(
+                [[-15.904417, -66.117517], [-15.648014, -65.319403], [-16.237095, -64.885632], [-16.681021, -65.480629], [-15.904417, -66.117517]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_fa846ae235cc0a784a74055b84db661a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d1cf9c6cb4d69f0014082a214cb8a607 = $(`<div id="html_d1cf9c6cb4d69f0014082a214cb8a607" style="width: 100.0%; height: 100.0%;">EMSR709-Isiboro Park</div>`)[0];
+                popup_fa846ae235cc0a784a74055b84db661a.setContent(html_d1cf9c6cb4d69f0014082a214cb8a607);
+            
+        
+
+        polygon_7d00f04d842329db526178a2cf2b7a24.bindPopup(popup_fa846ae235cc0a784a74055b84db661a)
+        ;
+
+        
+    
+    
+            var polygon_282999f35fb5464cef2e90a3faedc7bd = L.polygon(
+                [[50.780343, 2.556036], [51.198548, 2.556036], [51.198548, 3.253858], [50.780343, 3.253858], [50.780343, 2.556036]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_895b6d74ef517f4c58e172f42c7db673 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_45c5b7153fe4bb82c923ba171c4b9c76 = $(`<div id="html_45c5b7153fe4bb82c923ba171c4b9c76" style="width: 100.0%; height: 100.0%;"><b>EMSR708 - Flood in Belgium</b><br><br>On 10 November 2023 between 6:00 and 12:00 UTC, a flood event is reported to have affected West Flanders, Belgium. The event is ongoing and spreading with damage expected to affect urban areas. Copernicus EMS Rapid Mapping is requested to provide flood extent.<br><br><b>Roads [km]:</b> 69<br><b>max_extent:</b> 17334.2<br><b>Built-up [No.]:</b> 138<br><b>Population [No.]:</b> 2850</div>`)[0];
+                popup_895b6d74ef517f4c58e172f42c7db673.setContent(html_45c5b7153fe4bb82c923ba171c4b9c76);
+            
+        
+
+        polygon_282999f35fb5464cef2e90a3faedc7bd.bindPopup(popup_895b6d74ef517f4c58e172f42c7db673)
+        ;
+
+        
+    
+    
+            var polygon_174fd39824eeedb713f02fda4128a93c = L.polygon(
+                [[51.19114, 2.948037], [51.103982, 2.924712], [51.103949, 2.883717], [51.088359, 2.882577], [51.084747, 2.868625], [51.076509, 2.860133], [51.050402, 3.01954], [51.053542, 3.072851], [50.990478, 3.067083], [50.844129, 2.918674], [50.819879, 2.874075], [50.824553, 2.771104], [50.841086, 2.626191], [50.855003, 2.619564], [50.853922, 2.614969], [50.849687, 2.608734], [50.848393, 2.604098], [50.849171, 2.603428], [50.848423, 2.599856], [50.849858, 2.598819], [50.853279, 2.599139], [50.861013, 2.608846], [50.863228, 2.611625], [50.867686, 2.612305], [50.867966, 2.610992], [50.872582, 2.607278], [50.873911, 2.606156], [50.874865, 2.60629], [50.87558, 2.606464], [50.879727, 2.610225], [50.881382, 2.609569], [50.882427, 2.606603], [50.885727, 2.607078], [50.886521, 2.604383], [50.889557, 2.606506], [50.891033, 2.605978], [50.894534, 2.609365], [50.897415, 2.609314], [50.898232, 2.608997], [50.898766, 2.606678], [50.900257, 2.605533], [50.901779, 2.606297], [50.90469, 2.603814], [50.906338, 2.604694], [50.908299, 2.607297], [50.910015, 2.60792], [50.911282, 2.606653], [50.91269, 2.607036], [50.913933, 2.605033], [50.916401, 2.603661], [50.915005, 2.598925], [50.914551, 2.593528], [50.914718, 2.593268], [50.915303, 2.595554], [50.945705, 2.632968], [50.945946, 2.632617], [50.949261, 2.630617], [50.950344, 2.628483], [50.956349, 2.626103], [50.96011, 2.622442], [50.96748, 2.618708], [50.973595, 2.610761], [50.97498, 2.61185], [50.977896, 2.609642], [50.97937, 2.608525], [50.981098, 2.609031], [50.981919, 2.606536], [50.985638, 2.609556], [50.988766, 2.606858], [50.990418, 2.607075], [50.991005, 2.606289], [50.991226, 2.604922], [50.991403, 2.601211], [50.991627, 2.596492], [50.991917, 2.595164], [50.992829, 2.592742], [50.996826, 2.583394], [50.997406, 2.582315], [50.998971, 2.579708], [50.999867, 2.578217], [51.003372, 2.574019], [51.005914, 2.575085], [51.006781, 2.573877], [51.007889, 2.572333], [51.009609, 2.571614], [51.013085, 2.572456], [51.01405, 2.575892], [51.035906, 2.569179], [51.046028, 2.566069], [51.046273, 2.565999], [51.056843, 2.562952], [51.057156, 2.562862], [51.058413, 2.5625], [51.059029, 2.562322], [51.064312, 2.562869], [51.064595, 2.562688], [51.069691, 2.559417], [51.070038, 2.559194], [51.070355, 2.558979], [51.074672, 2.556036], [51.08591, 2.598619], [51.088168, 2.597512], [51.09574836730982, 2.6279074435476995], [51.113959, 2.622325], [51.16591, 2.775483], [51.194995, 2.85028], [51.198548, 2.876776], [51.19114, 2.948037]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_a0798f2acb764bcf4d7fa85c50ad8551 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7ac7b1a703228fea1aab537824302cce = $(`<div id="html_7ac7b1a703228fea1aab537824302cce" style="width: 100.0%; height: 100.0%;">EMSR708-Westhoek</div>`)[0];
+                popup_a0798f2acb764bcf4d7fa85c50ad8551.setContent(html_7ac7b1a703228fea1aab537824302cce);
+            
+        
+
+        polygon_174fd39824eeedb713f02fda4128a93c.bindPopup(popup_a0798f2acb764bcf4d7fa85c50ad8551)
+        ;
+
+        
+    
+    
+            var polygon_477a98eac507fad360e815102f947ceb = L.polygon(
+                [[50.941524, 3.188927], [50.936591, 3.213959], [50.931081, 3.231426], [50.924913, 3.242762], [50.915956, 3.244186], [50.909639, 3.222805], [50.917204, 3.17094], [50.918353, 3.162729], [50.929278, 3.154902], [50.946534, 3.161281], [50.941524, 3.188927]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_4d28a66c718e96765b9bd2a0b1e57a7e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_db8caba48f3bd3440406d2e62fee618c = $(`<div id="html_db8caba48f3bd3440406d2e62fee618c" style="width: 100.0%; height: 100.0%;">EMSR708-Kachtem</div>`)[0];
+                popup_4d28a66c718e96765b9bd2a0b1e57a7e.setContent(html_db8caba48f3bd3440406d2e62fee618c);
+            
+        
+
+        polygon_477a98eac507fad360e815102f947ceb.bindPopup(popup_4d28a66c718e96765b9bd2a0b1e57a7e)
+        ;
+
+        
+    
+    
+            var polygon_7ccff70df566d0a50c97e524c8cc7004 = L.polygon(
+                [[50.856069, 3.049686], [50.876284, 3.02864], [50.902804, 3.042918], [50.904447, 3.086997], [50.885743, 3.172573], [50.81368, 3.251352], [50.812296, 3.253858], [50.780343, 3.193467], [50.856069, 3.049686]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_2f3b35e5af466833bebe0e9d1100561e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_657ece0fe4616a90350b8a844a86b924 = $(`<div id="html_657ece0fe4616a90350b8a844a86b924" style="width: 100.0%; height: 100.0%;">EMSR708-Moorsele Wevelgem</div>`)[0];
+                popup_2f3b35e5af466833bebe0e9d1100561e.setContent(html_657ece0fe4616a90350b8a844a86b924);
+            
+        
+
+        polygon_7ccff70df566d0a50c97e524c8cc7004.bindPopup(popup_2f3b35e5af466833bebe0e9d1100561e)
+        ;
+
+        
+    
+    
+            var polygon_06651c9748be24561c1889b55823c487 = L.polygon(
+                [[50.91811, 6.919481], [50.947102, 6.919481], [50.947102, 6.968029], [50.91811, 6.968029], [50.91811, 6.919481]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_e9ce0423da43109e96876a08b1ba6150 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_442e97206b982952072712ed55eb13f7 = $(`<div id="html_442e97206b982952072712ed55eb13f7" style="width: 100.0%; height: 100.0%;"><b>EMSR707 - Cologne Festival, Germany</b><br><br>On the 11 November 2023, a major festival will take place in the heart of the city of Cologne, Germany. Tens of thousands of visitors are expected for the day. The Cologne Fire service, which is tasked with providing safety measures during large events, needs to collect information on gathering people and places during this event, in order to better manage and predict the flow of visitors for the coming years. Copernicus EMS Rapid Mapping is requested to provide a situation assessment emergency mapping.<br><br><b>Roads [km]:</b> 69<br><b>max_extent:</b> 17334.2<br><b>Built-up [No.]:</b> 138<br><b>Population [No.]:</b> 2850</div>`)[0];
+                popup_e9ce0423da43109e96876a08b1ba6150.setContent(html_442e97206b982952072712ed55eb13f7);
+            
+        
+
+        polygon_06651c9748be24561c1889b55823c487.bindPopup(popup_e9ce0423da43109e96876a08b1ba6150)
+        ;
+
+        
+    
+    
+            var polygon_d7985339e8f0cdb25f97f84bf00b0c93 = L.polygon(
+                [[50.918307, 6.920107], [50.946806, 6.919481], [50.947102, 6.965267], [50.91811, 6.968029], [50.918307, 6.920107]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_6fc52d801a28287877dfd992b4b27993 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2cd10a9b5c975cc15d7c1f47b195152f = $(`<div id="html_2cd10a9b5c975cc15d7c1f47b195152f" style="width: 100.0%; height: 100.0%;">EMSR707-Cologne</div>`)[0];
+                popup_6fc52d801a28287877dfd992b4b27993.setContent(html_2cd10a9b5c975cc15d7c1f47b195152f);
+            
+        
+
+        polygon_d7985339e8f0cdb25f97f84bf00b0c93.bindPopup(popup_6fc52d801a28287877dfd992b4b27993)
+        ;
+
+        
+    
+    
+            var polygon_0cf90ad487438e78f1e52f80116acca8 = L.polygon(
+                [[50.24887, 1.551804], [51.094214, 1.551804], [51.094214, 3.18222], [50.24887, 3.18222], [50.24887, 1.551804]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_1bf423ccf046e502289c8bc8580b8fa2 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_01b751d9e72beaa20e23938a5bf6085b = $(`<div id="html_01b751d9e72beaa20e23938a5bf6085b" style="width: 100.0%; height: 100.0%;"><b>EMSR706 - Flood in northern France</b><br><br>On the 7 November 2023, flooding is affecting the North part of France. A flood red alert has been issued for the Liane and Aa rivers while there is an on-going flood event in other river basins (Hem, Lys, Canche). Many damages have already been reported. Copernicus EMS Rapid Mapping is requested to provide initial rough estimation, flood extent and damage assessment emergency mapping.<br><br><b>Roads [km]:</b> 144.5<br><b>max_extent:</b> 9931.5<br><b>Built-up [ha]:</b> 296.4<br><b>Built-up [No.]:</b> -<br><b>Population [No.]:</b> 15510</div>`)[0];
+                popup_1bf423ccf046e502289c8bc8580b8fa2.setContent(html_01b751d9e72beaa20e23938a5bf6085b);
+            
+        
+
+        polygon_0cf90ad487438e78f1e52f80116acca8.bindPopup(popup_1bf423ccf046e502289c8bc8580b8fa2)
+        ;
+
+        
+    
+    
+            var polygon_9847a8b407ed22bbec0a439485e728b3 = L.polygon(
+                [[50.912589, 2.602137], [50.907719, 2.604437], [50.902712, 2.601563], [50.898532, 2.596943], [50.86728, 2.602966], [50.85213, 2.592694], [50.810395, 2.627703], [50.809874, 2.641582], [50.810667, 2.71491], [50.793856, 2.721639], [50.777256, 2.735821], [50.775893, 2.744898], [50.775468, 2.747727], [50.768617, 2.755808], [50.765854, 2.7539], [50.763724, 2.75243], [50.725611, 2.784241], [50.720075, 2.800568], [50.71214, 2.817866], [50.715811, 2.828549], [50.715967, 2.844588], [50.699324, 2.86376], [50.685593, 2.90753], [50.709875, 2.93851], [50.738152, 2.957408], [50.757181, 3.019112], [50.771329, 3.102744], [50.78002, 3.142919], [50.738365, 3.181313], [50.735304, 3.18222], [50.268507, 3.052139], [50.25625452184191, 2.5906254536702447], [50.2537, 2.590564], [50.24887, 2.312473], [50.502372, 1.563363], [50.559243, 1.567545], [50.579448, 1.564943], [50.681495, 1.551804], [50.742151, 1.555987], [50.743101, 1.569805], [50.744254, 1.586583], [50.757182, 1.594662], [50.79758, 1.597625], [50.849075, 1.576812], [50.87424, 1.578363], [50.880616, 1.622251], [50.921014, 1.680745], [50.957289, 1.752216], [50.969139, 1.788844], [50.982066, 1.832475], [50.998231, 1.900262], [51.094044, 2.533162], [51.09393034204444, 2.5332577157981735], [51.094214, 2.535134], [51.077338465824866, 2.5472303820118087], [51.07065, 2.552863], [51.06907713652815, 2.5531521024184842], [51.063702, 2.557005], [51.003334, 2.568974], [50.984617, 2.601448], [50.94731, 2.624557], [50.920584, 2.58396], [50.911912, 2.589039], [50.912589, 2.602137]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_97ccaf812f4e1136e36b33992230292e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b1ca1953972b777abe5e81ea0ef282fc = $(`<div id="html_b1ca1953972b777abe5e81ea0ef282fc" style="width: 100.0%; height: 100.0%;">EMSR706-Calais</div>`)[0];
+                popup_97ccaf812f4e1136e36b33992230292e.setContent(html_b1ca1953972b777abe5e81ea0ef282fc);
+            
+        
+
+        polygon_9847a8b407ed22bbec0a439485e728b3.bindPopup(popup_97ccaf812f4e1136e36b33992230292e)
+        ;
+
+        
+    
+    
+            var polygon_d2595c1d2e6345c1172c2257a312ed32 = L.polygon(
+                [[50.7368, 1.568492], [50.736401, 1.909579], [50.722, 1.94056], [50.631952, 1.939968], [50.633694, 1.567119], [50.7368, 1.568492]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_5b32aff0424c545858383f78afb2bc2b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a61faf9bc7d01944512bb7f66b68ec70 = $(`<div id="html_a61faf9bc7d01944512bb7f66b68ec70" style="width: 100.0%; height: 100.0%;">EMSR706-Desvres</div>`)[0];
+                popup_5b32aff0424c545858383f78afb2bc2b.setContent(html_a61faf9bc7d01944512bb7f66b68ec70);
+            
+        
+
+        polygon_d2595c1d2e6345c1172c2257a312ed32.bindPopup(popup_5b32aff0424c545858383f78afb2bc2b)
+        ;
+
+        
+    
+    
+            var polygon_194a985599240142240f937904839256 = L.polygon(
+                [[50.673745, 2.23162], [50.566139, 2.110771], [50.618448, 2.020134], [50.714197, 2.095665], [50.752441, 2.23574], [50.775894, 2.315391], [50.720283, 2.349723], [50.673745, 2.23162]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_b6efdf0017580f52b3d6d9f6e747cff5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c187b737f27fdde01783fd4e1ef68ecf = $(`<div id="html_c187b737f27fdde01783fd4e1ef68ecf" style="width: 100.0%; height: 100.0%;">EMSR706-Lumbres</div>`)[0];
+                popup_b6efdf0017580f52b3d6d9f6e747cff5.setContent(html_c187b737f27fdde01783fd4e1ef68ecf);
+            
+        
+
+        polygon_194a985599240142240f937904839256.bindPopup(popup_b6efdf0017580f52b3d6d9f6e747cff5)
+        ;
+
+        
+    
+    
+            var polygon_18c51a88ce478b5166926427811db99d = L.polygon(
+                [[50.869588, 2.198661], [50.712457, 1.961082], [50.75331, 1.873191], [50.914633, 2.12313], [50.869588, 2.198661]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_7cb1d52a7321afbed058cbc8721577c8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_18b66a9786472d93b36c16becd53a08f = $(`<div id="html_18b66a9786472d93b36c16becd53a08f" style="width: 100.0%; height: 100.0%;">EMSR706-Nordausques</div>`)[0];
+                popup_7cb1d52a7321afbed058cbc8721577c8.setContent(html_18b66a9786472d93b36c16becd53a08f);
+            
+        
+
+        polygon_18c51a88ce478b5166926427811db99d.bindPopup(popup_7cb1d52a7321afbed058cbc8721577c8)
+        ;
+
+        
+    
+    
+            var polygon_f23406aeccb07eb7416c2f6d3081f2ed = L.polygon(
+                [[50.912314, 2.590982], [50.914063, 2.601407], [50.908288, 2.603376], [50.902602, 2.60154], [50.870634, 2.602748], [50.861454, 2.602124], [50.850914, 2.593095], [50.847099, 2.59756], [50.787182, 2.329124], [50.885186, 2.279686], [50.954444, 2.605156], [50.932511, 2.605156], [50.918233, 2.584547], [50.912314, 2.590982]],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_b89f18c6b323da360ed459f5d7ee88bf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e667a6ceac730b6ab9b55eeefa02cf4c = $(`<div id="html_e667a6ceac730b6ab9b55eeefa02cf4c" style="width: 100.0%; height: 100.0%;">EMSR706-Wormhout</div>`)[0];
+                popup_b89f18c6b323da360ed459f5d7ee88bf.setContent(html_e667a6ceac730b6ab9b55eeefa02cf4c);
+            
+        
+
+        polygon_f23406aeccb07eb7416c2f6d3081f2ed.bindPopup(popup_b89f18c6b323da360ed459f5d7ee88bf)
+        ;
+
+        
+    
+    
+            var polygon_28d78007ea9ee77b0931b1e44c3afad6 = L.polygon(
+                [[50.257541, 2.439159], [50.249639, 2.31419], [50.343507, 2.036785], [50.46255, 2.040905], [50.46255, 2.437786], [50.257541, 2.439159]],
+                {"bubblingMouseEvents": true, "color": "lightred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_fa1eb69c8f35e1fcd550050220a98324 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6db50e3e0d0bfb8bba3e32d0de7cb928 = $(`<div id="html_6db50e3e0d0bfb8bba3e32d0de7cb928" style="width: 100.0%; height: 100.0%;">EMSR706-Saint-Pol-sur-Ternoise</div>`)[0];
+                popup_fa1eb69c8f35e1fcd550050220a98324.setContent(html_6db50e3e0d0bfb8bba3e32d0de7cb928);
+            
+        
+
+        polygon_28d78007ea9ee77b0931b1e44c3afad6.bindPopup(popup_fa1eb69c8f35e1fcd550050220a98324)
+        ;
+
+        
+    
+    
+            var polygon_1285100c245e38e2096ec463a190c537 = L.polygon(
+                [[50.346761, 2.036897], [50.50362, 1.578106], [50.589141, 1.580852], [50.443515, 2.040245], [50.346761, 2.036897]],
+                {"bubblingMouseEvents": true, "color": "beige", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "beige", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_24543f4bb24524a7459c2102c82c0162 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_90e9ebfaa5003637a7155a4f7a180bad = $(`<div id="html_90e9ebfaa5003637a7155a4f7a180bad" style="width: 100.0%; height: 100.0%;">EMSR706-Montreuil-sur-Mer</div>`)[0];
+                popup_24543f4bb24524a7459c2102c82c0162.setContent(html_90e9ebfaa5003637a7155a4f7a180bad);
+            
+        
+
+        polygon_1285100c245e38e2096ec463a190c537.bindPopup(popup_24543f4bb24524a7459c2102c82c0162)
+        ;
+
+        
+    
+    
+            var polygon_acc9430a7db61ce23efee82bde4923bd = L.polygon(
+                [[43.500318, 10.439732], [43.980337, 10.439732], [43.980337, 11.304679], [43.500318, 11.304679], [43.500318, 10.439732]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_3092a546c569e50062ca638bc3aa5ad6 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_5c03ea96e7e78040b1c81e2857777c7c = $(`<div id="html_5c03ea96e7e78040b1c81e2857777c7c" style="width: 100.0%; height: 100.0%;"><b>EMSR705 - Flood in Tuscany region, Italy</b><br><br>On the 2 November 2023 during afternoon, an intense weather system hit Italy with strong scirocco winds and high precipitations. The highest rainfall has occurred in Tuscany region between Pisa, Florence, Pistoia, and Prato provinces, with the Bisenzio River and some smaller secondary rivers flooding.
+ The event is on-going and rainfall is expected to continue. Copernicus EMS Rapid Mapping is requested to provide initial rough estimation, flood extent and damage assessment emergency mapping.<br><br><b>Roads [km]:</b> 59.9<br><b>max_extent:</b> 3424.8<br><b>Built-up [ha]:</b> 4.2<br><b>Built-up [No.]:</b> 854<br><b>Population [No.]:</b> 5000</div>`)[0];
+                popup_3092a546c569e50062ca638bc3aa5ad6.setContent(html_5c03ea96e7e78040b1c81e2857777c7c);
+            
+        
+
+        polygon_acc9430a7db61ce23efee82bde4923bd.bindPopup(popup_3092a546c569e50062ca638bc3aa5ad6)
+        ;
+
+        
+    
+    
+            var polygon_39e0995a0004edba108f9ae0ea92f887 = L.polygon(
+                [[43.841523, 10.886233], [43.980337, 11.012826], [43.84943, 11.304679], [43.725268, 11.170883], [43.841523, 10.886233]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_70a347dcfab2baebb4dd1dcb25af1d41 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bbceb8e9fe3e15bf7a852bf066263fa8 = $(`<div id="html_bbceb8e9fe3e15bf7a852bf066263fa8" style="width: 100.0%; height: 100.0%;">EMSR705-Prato</div>`)[0];
+                popup_70a347dcfab2baebb4dd1dcb25af1d41.setContent(html_bbceb8e9fe3e15bf7a852bf066263fa8);
+            
+        
+
+        polygon_39e0995a0004edba108f9ae0ea92f887.bindPopup(popup_70a347dcfab2baebb4dd1dcb25af1d41)
+        ;
+
+        
+    
+    
+            var polygon_3026cca5a4112f05ca6b67904e8d18f4 = L.polygon(
+                [[43.755775, 10.799644], [43.760895, 10.803951], [43.768208, 10.80582], [43.773815, 10.809179], [43.776849, 10.811156], [43.779585, 10.812808], [43.783485, 10.812511], [43.788984, 10.811915], [43.792668, 10.814407], [43.799602, 10.81828], [43.80055, 10.821341], [43.794273, 10.823325], [43.786959, 10.834498], [43.784399, 10.836895], [43.782409, 10.836367], [43.779077, 10.819059], [43.765263, 10.819465], [43.754577, 10.817515], [43.746687, 10.806903], [43.744046, 10.808208], [43.765631, 10.858459], [43.771193, 10.930061], [43.737332, 11.021265], [43.694565, 11.010833], [43.670891, 10.923996], [43.660777, 10.813971], [43.663937, 10.758236], [43.704903, 10.717085], [43.73452, 10.786032], [43.738869, 10.796156], [43.74251, 10.789302], [43.743874, 10.781646], [43.749107, 10.77984], [43.752525, 10.793468], [43.755775, 10.799644]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_21fa4ba2fa1e4192be4fc25a8eb82394 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0b5096da2f965ddda3cb22b206fcbeb4 = $(`<div id="html_0b5096da2f965ddda3cb22b206fcbeb4" style="width: 100.0%; height: 100.0%;">EMSR705-Fucecchio</div>`)[0];
+                popup_21fa4ba2fa1e4192be4fc25a8eb82394.setContent(html_0b5096da2f965ddda3cb22b206fcbeb4);
+            
+        
+
+        polygon_3026cca5a4112f05ca6b67904e8d18f4.bindPopup(popup_21fa4ba2fa1e4192be4fc25a8eb82394)
+        ;
+
+        
+    
+    
+            var polygon_531d808deff86bca37db51901ed576ae = L.polygon(
+                [[43.654514997938946, 10.554735408915095], [43.654514997938946, 10.554735408915098], [43.654514997938946, 10.554735408915102], [43.711531, 10.645351], [43.672453, 10.715524], [43.644037, 10.761927], [43.500318, 10.53775], [43.582154, 10.439732], [43.598034, 10.46497], [43.654242, 10.476443], [43.654514997938946, 10.554735408915095]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_61a46d16fd10bbd5000c596247d28d27 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e7ef3a4d64efc6de0f7277a25f039dac = $(`<div id="html_e7ef3a4d64efc6de0f7277a25f039dac" style="width: 100.0%; height: 100.0%;">EMSR705-Pontedera</div>`)[0];
+                popup_61a46d16fd10bbd5000c596247d28d27.setContent(html_e7ef3a4d64efc6de0f7277a25f039dac);
+            
+        
+
+        polygon_531d808deff86bca37db51901ed576ae.bindPopup(popup_61a46d16fd10bbd5000c596247d28d27)
+        ;
+
+        
+    
+    
+            var polygon_248b259d4f8cc55c893c16c5454c7e56 = L.polygon(
+                [[43.899699, 10.938526], [43.866896, 11.012701], [43.821449, 10.986326], [43.847052, 10.926924], [43.899699, 10.938526]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_243e5ee1ade2123d08cdcf5f21613912 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5ec7327ea4ebb59e230892508623e0aa = $(`<div id="html_5ec7327ea4ebb59e230892508623e0aa" style="width: 100.0%; height: 100.0%;">EMSR705-Quarrata</div>`)[0];
+                popup_243e5ee1ade2123d08cdcf5f21613912.setContent(html_5ec7327ea4ebb59e230892508623e0aa);
+            
+        
+
+        polygon_248b259d4f8cc55c893c16c5454c7e56.bindPopup(popup_243e5ee1ade2123d08cdcf5f21613912)
+        ;
+
+        
+    
+    
+            var polygon_30802fb9adf2d1643f56d79ad2b6446e = L.polygon(
+                [[43.75968, 11.046326], [43.893088, 11.127343], [43.820965, 11.267226], [43.759453, 11.219719], [43.733845, 11.154654], [43.74883, 11.08405], [43.75968, 11.046326]],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_2a90248b48c063f7c2342e4bb52193f0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_857c2fd41b65650e4cd6ea20b02f3ee0 = $(`<div id="html_857c2fd41b65650e4cd6ea20b02f3ee0" style="width: 100.0%; height: 100.0%;">EMSR705-Bisenzio</div>`)[0];
+                popup_2a90248b48c063f7c2342e4bb52193f0.setContent(html_857c2fd41b65650e4cd6ea20b02f3ee0);
+            
+        
+
+        polygon_30802fb9adf2d1643f56d79ad2b6446e.bindPopup(popup_2a90248b48c063f7c2342e4bb52193f0)
+        ;
+
+        
+    
+    
+            var polygon_65427ef73265852b2bb693362e31794f = L.polygon(
+                [[43.889258, 11.098409], [43.881162, 11.100738], [43.877201, 11.095906], [43.878211, 11.089519], [43.903942, 10.982435], [43.905477, 10.979768], [43.908073, 10.977712], [43.911522, 10.977991], [43.917407, 10.982058], [43.915824, 10.988617], [43.958291, 11.024161], [43.926835, 11.123181], [43.889258, 11.098409]],
+                {"bubblingMouseEvents": true, "color": "lightred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_e51285410669e21671b8691d3f949f52 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_31e799bef0f556c0a3c97ce3f3c50775 = $(`<div id="html_31e799bef0f556c0a3c97ce3f3c50775" style="width: 100.0%; height: 100.0%;">EMSR705-Montemurlo</div>`)[0];
+                popup_e51285410669e21671b8691d3f949f52.setContent(html_31e799bef0f556c0a3c97ce3f3c50775);
+            
+        
+
+        polygon_65427ef73265852b2bb693362e31794f.bindPopup(popup_e51285410669e21671b8691d3f949f52)
+        ;
+
+        
+    
+    
+            var polygon_fd07b6cb4fbcbf1b6eb07b6c40b7500a = L.polygon(
+                [[43.652376, 10.535291], [43.718215, 10.646792], [43.669996, 10.708218], [43.650654, 10.729025], [43.588689, 10.63086], [43.652376, 10.535291]],
+                {"bubblingMouseEvents": true, "color": "beige", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "beige", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_d5f0566973be62846b60d523e1d070de = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_50d40d510825dfc3a9f107c1b9db1ade = $(`<div id="html_50d40d510825dfc3a9f107c1b9db1ade" style="width: 100.0%; height: 100.0%;">EMSR705-Pontedera-Ponsacco</div>`)[0];
+                popup_d5f0566973be62846b60d523e1d070de.setContent(html_50d40d510825dfc3a9f107c1b9db1ade);
+            
+        
+
+        polygon_fd07b6cb4fbcbf1b6eb07b6c40b7500a.bindPopup(popup_d5f0566973be62846b60d523e1d070de)
+        ;
+
+        
+    
+    
+            var polygon_74a14497e4d6189bbeff795794e71132 = L.polygon(
+                [[43.790409, 10.696299], [43.720719, 10.696299], [43.720719, 10.606554], [43.790409, 10.606554], [43.790409, 10.696299]],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_2c804b2272861587de26e42ea543ffe1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1d5b014e90bf2b467c384b42916c0789 = $(`<div id="html_1d5b014e90bf2b467c384b42916c0789" style="width: 100.0%; height: 100.0%;">EMSR705-Orentano</div>`)[0];
+                popup_2c804b2272861587de26e42ea543ffe1.setContent(html_1d5b014e90bf2b467c384b42916c0789);
+            
+        
+
+        polygon_74a14497e4d6189bbeff795794e71132.bindPopup(popup_2c804b2272861587de26e42ea543ffe1)
+        ;
+
+        
+    
+    
+            var polygon_210bd624535930be8480f3b534bf4346 = L.polygon(
+                [[38.794316, -0.376291], [38.939355, -0.376291], [38.939355, -0.115625], [38.794316, -0.115625], [38.794316, -0.376291]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_c76fa7ff3b1378285fe5bd776fe887bc = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_49ee5e0a34ca31557998a06047c6de45 = $(`<div id="html_49ee5e0a34ca31557998a06047c6de45" style="width: 100.0%; height: 100.0%;"><b>EMSR704 - Wildfire in Valencia region, Spain</b><br><br>On the 2 November 2023 at 13:30, a wildfire is reported to have affected Valencia region, in Spain. The event is on-going and spreading due to the strong wind that is expected to continue for the next few hours. Copernicus EMS Rapid Mapping is requested to provide fire extent and damage assessment emergency mapping.<br><br><b>Roads [km]:</b> 59.9<br><b>max_extent:</b> 3424.8<br><b>Built-up [ha]:</b> 4.2<br><b>Built-up [No.]:</b> 854<br><b>Population [No.]:</b> 5000</div>`)[0];
+                popup_c76fa7ff3b1378285fe5bd776fe887bc.setContent(html_49ee5e0a34ca31557998a06047c6de45);
+            
+        
+
+        polygon_210bd624535930be8480f3b534bf4346.bindPopup(popup_c76fa7ff3b1378285fe5bd776fe887bc)
+        ;
+
+        
+    
+    
+            var polygon_bac9abdb3648ec9c6ff088cd0272ce6e = L.polygon(
+                [[38.8701, -0.115625], [38.794316, -0.255719], [38.871913, -0.376291], [38.91384387107734, -0.3205586429982189], [38.932075, -0.296536], [38.93210606279798, -0.2962854771311883], [38.932211, -0.296146], [38.939355, -0.238269], [38.93788466001096, -0.2281407322514224], [38.93325, -0.193457], [38.93284980762399, -0.1934587311973638], [38.924805, -0.138043], [38.8701, -0.115625]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_553cc8586d414486ca160ad1c5ca48d0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_237b861c5471b8dbc464c26cd73af28d = $(`<div id="html_237b861c5471b8dbc464c26cd73af28d" style="width: 100.0%; height: 100.0%;">EMSR704-Villalonga</div>`)[0];
+                popup_553cc8586d414486ca160ad1c5ca48d0.setContent(html_237b861c5471b8dbc464c26cd73af28d);
+            
+        
+
+        polygon_bac9abdb3648ec9c6ff088cd0272ce6e.bindPopup(popup_553cc8586d414486ca160ad1c5ca48d0)
+        ;
+
+        
+    
+    
+            var polygon_74302ca592239cf6f625e360e9e3de3d = L.polygon(
+                [[16.73048, -100.109773], [16.983696, -100.109773], [16.983696, -99.722006], [16.73048, -99.722006], [16.73048, -100.109773]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_486a918693674070b13aa3dc8fdcb700 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_8e958650fe4ac14280e400f50783277d = $(`<div id="html_8e958650fe4ac14280e400f50783277d" style="width: 100.0%; height: 100.0%;"><b>EMSR703 - Tropical cyclone OTIS-23 in Acapulco, Mexico</b><br><br>On 25 October around 6.25 UTC, TC OTIS (Cat. 5 Hurricane) made landfall over the area of the coastal City of Acapulco (central Guerrero State, southern Mexico) with maximum sustained winds of 270 km/h OTIS-23.
+ OTIS-23 caused floods and landslides that resulted in evacuations and severe damage. As of 26 October, 34,522 evacuated families in 631 temporary shelters across the affected area according to WHO PAHO and national authorities. Copernicus EMS Rapid Mapping is requested to provide damage assessment emergency mapping.<br><br><b>Roads [km]:</b> 79.6<br><b>max_extent:</b> 943.5<br><b>Built-up [ha]:</b> 7386.9<br><b>Population [No.]:</b> 560000</div>`)[0];
+                popup_486a918693674070b13aa3dc8fdcb700.setContent(html_8e958650fe4ac14280e400f50783277d);
+            
+        
+
+        polygon_74302ca592239cf6f625e360e9e3de3d.bindPopup(popup_486a918693674070b13aa3dc8fdcb700)
+        ;
+
+        
+    
+    
+            var polygon_a463e9519868797d4ced2af5fdcb9e1f = L.polygon(
+                [[16.955282, -100.102071], [16.94793160428749, -100.07910902339025], [16.947933, -100.078726], [16.946694648978667, -100.07524488600508], [16.946679, -100.075196], [16.910037, -99.972197], [16.925261, -99.970167], [16.921167, -99.944973], [16.883376, -99.927337], [16.899438, -99.872855], [16.887156, -99.859786], [16.873614, -99.846402], [16.861962, -99.826404], [16.851412, -99.835379], [16.830627, -99.829711], [16.805275, -99.789243], [16.751265, -99.722006], [16.738031, -99.722699], [16.73055, -99.733007], [16.73048, -99.744681], [16.786537, -99.819633], [16.779609, -99.825932], [16.787797, -99.864982], [16.802913, -99.856794], [16.809842, -99.877579], [16.823698, -99.877579], [16.82789, -99.871023], [16.835529, -99.868568], [16.841885, -99.857385], [16.84653, -99.858369], [16.853459, -99.870572], [16.856608, -99.88128], [16.851175, -99.897971], [16.846609, -99.900884], [16.844562, -99.895687], [16.834878, -99.890885], [16.821289, -99.896994], [16.815506, -99.90545], [16.822271, -99.920454], [16.834012, -99.921196], [16.843381, -99.918126], [16.84842, -99.924267], [16.856411, -99.926432], [16.859718, -99.932691], [16.880208, -99.955582], [16.898158, -99.96692], [16.936936316019878, -100.07901166081885], [16.937386, -100.080411], [16.946795, -100.109773], [16.957644, -100.109439], [16.957636, -100.109425], [16.955282, -100.102071]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_828a41de2ae0fa17750604a25c958bc7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eb4043e6e5a76e1adda3d6136ac4abad = $(`<div id="html_eb4043e6e5a76e1adda3d6136ac4abad" style="width: 100.0%; height: 100.0%;">EMSR703-Acapulco Coast</div>`)[0];
+                popup_828a41de2ae0fa17750604a25c958bc7.setContent(html_eb4043e6e5a76e1adda3d6136ac4abad);
+            
+        
+
+        polygon_a463e9519868797d4ced2af5fdcb9e1f.bindPopup(popup_828a41de2ae0fa17750604a25c958bc7)
+        ;
+
+        
+    
+    
+            var polygon_7d340f233aa86e4270fa793272b31e01 = L.polygon(
+                [[16.968013, -99.803572], [16.95762, -99.797116], [16.93526, -99.803572], [16.919199, -99.79255], [16.898965, -99.793888], [16.876684, -99.804044], [16.850231, -99.778221], [16.826887, -99.771765], [16.818384, -99.786802], [16.807834, -99.77885], [16.800906, -99.783102], [16.828776, -99.82664], [16.844208, -99.828845], [16.854285, -99.821601], [16.865465, -99.826483], [16.874519, -99.832388], [16.874913, -99.847583], [16.899162, -99.873013], [16.928962, -99.855849], [16.968013, -99.803572]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_3db51aa3a7c5c18751bd654af8bb87f0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_10f07ce22bcf6d3ee432b007c5b6387b = $(`<div id="html_10f07ce22bcf6d3ee432b007c5b6387b" style="width: 100.0%; height: 100.0%;">EMSR703-Acapulco Inland</div>`)[0];
+                popup_3db51aa3a7c5c18751bd654af8bb87f0.setContent(html_10f07ce22bcf6d3ee432b007c5b6387b);
+            
+        
+
+        polygon_7d340f233aa86e4270fa793272b31e01.bindPopup(popup_3db51aa3a7c5c18751bd654af8bb87f0)
+        ;
+
+        
+    
+    
+            var polygon_3412ca6d6f0ec700aca3e7084c24b3b7 = L.polygon(
+                [[16.961609, -100.008978], [16.966909, -100.008439], [16.97176, -100.006239], [16.973556, -100.00323], [16.974769, -99.995594], [16.973871, -99.98733], [16.972119, -99.976955], [16.972029, -99.962898], [16.972703, -99.953556], [16.973098, -99.953047], [16.972658, -99.950547], [16.975802, -99.944932], [16.98023, -99.943844], [16.980543, -99.943439], [16.983696, -99.937066], [16.981236, -99.935905], [16.982669, -99.929367], [16.982508, -99.928351], [16.976077, -99.929397], [16.97432, -99.931953], [16.969559, -99.933614], [16.967141, -99.932534], [16.95942, -99.93572], [16.947279, -99.940071], [16.934928, -99.946667], [16.921167, -99.944973], [16.925261, -99.970167], [16.931911, -99.982317], [16.958892, -99.997255], [16.960038, -100.001164], [16.961609, -100.008978]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_72454435db367fa96b1d11c9e4c217d6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1311dbf83d24a1005541754bbef046e3 = $(`<div id="html_1311dbf83d24a1005541754bbef046e3" style="width: 100.0%; height: 100.0%;">EMSR703-El Conchero</div>`)[0];
+                popup_72454435db367fa96b1d11c9e4c217d6.setContent(html_1311dbf83d24a1005541754bbef046e3);
+            
+        
+
+        polygon_3412ca6d6f0ec700aca3e7084c24b3b7.bindPopup(popup_72454435db367fa96b1d11c9e4c217d6)
+        ;
+
+        
+    
+    
+            var polygon_7cdb7cfedcf5a19b1d57e239c7ffbe11 = L.polygon(
+                [[-16.375488, 165.748392], [-9.853904, 165.748392], [-9.853904, 168.848249], [-16.375488, 168.848249], [-16.375488, 165.748392]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_fa81ce3f5bbe35066e47fa980270e7ea = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_c1006bcfebca88a80b81a2146626a276 = $(`<div id="html_c1006bcfebca88a80b81a2146626a276" style="width: 100.0%; height: 100.0%;"><b>EMSR702 - Tropical Cyclone LOLA in Vanuatu and Solomon Islands</b><br><br>In the evening of 24 October 2023 local time, the Vanuatu archipelago was hit by the passage of a new tropical cyclone, named LOLA, with winds of up to 145 km/h. The cyclone has passed Solomon Island, and will have an impact on parts of Vanuatu. The event is on-going and increasing over the next 48 hours with very heavy rainfall, strong wind and storm surge are forecast over the whole Vanuatu with damage expected to affect buildings and infrastructure. Copernicus EMS Rapid Mapping is requested to provide damage assessment emergency mapping.<br><br><b>Roads [km]:</b> 5.2<br><b>max_extent:</b>  -<br><b>Built-up [No.]:</b> 6353<br><b>Population [No.]:</b> Not Available<br><b>Airfield runways [ha]:</b> 7.9</div>`)[0];
+                popup_fa81ce3f5bbe35066e47fa980270e7ea.setContent(html_c1006bcfebca88a80b81a2146626a276);
+            
+        
+
+        polygon_7cdb7cfedcf5a19b1d57e239c7ffbe11.bindPopup(popup_fa81ce3f5bbe35066e47fa980270e7ea)
+        ;
+
+        
+    
+    
+            var polygon_85d7d28b758b68fc512d3d26d8ba46d7 = L.polygon(
+                [[-15.490597, 167.163816], [-15.483459, 167.231488], [-15.483784, 167.249023], [-15.467737, 167.249405], [-15.467618, 167.261778], [-15.526639, 167.262076], [-15.523319, 167.220715], [-15.537074, 167.219614], [-15.541619, 167.219067], [-15.54909, 167.194161], [-15.54354, 167.141381], [-15.543493, 167.140759], [-15.490597, 167.163816]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_5fc3f6e5b3d4a2a614aa76d415eec6f1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f47bfb24a498a104c7f0d10623a5b7d0 = $(`<div id="html_f47bfb24a498a104c7f0d10623a5b7d0" style="width: 100.0%; height: 100.0%;">EMSR702-Luganville</div>`)[0];
+                popup_5fc3f6e5b3d4a2a614aa76d415eec6f1.setContent(html_f47bfb24a498a104c7f0d10623a5b7d0);
+            
+        
+
+        polygon_85d7d28b758b68fc512d3d26d8ba46d7.bindPopup(popup_5fc3f6e5b3d4a2a614aa76d415eec6f1)
+        ;
+
+        
+    
+    
+            var polygon_7e7303be2cd08920fb39b35a7ee08e23 = L.polygon(
+                [[-15.944534, 167.333673], [-15.937025, 167.339403], [-15.932952, 167.347088], [-15.936351, 167.351719], [-15.954904, 167.339877], [-15.965393, 167.347743], [-15.971075, 167.352842], [-15.974134, 167.361437], [-15.979087, 167.367993], [-15.968744, 167.373675], [-15.961385, 167.381758], [-15.985458, 167.4073], [-15.994866, 167.397925], [-15.996168, 167.386021], [-15.999975, 167.383285], [-16.005831, 167.386999], [-16.009876, 167.382968], [-16.004223, 167.376528], [-16.000765, 167.372836], [-15.997027, 167.365836], [-15.989106, 167.360391], [-15.972785, 167.34297], [-15.970648, 167.337968], [-15.96684, 167.336624], [-15.937021, 167.304794], [-15.911911, 167.314566], [-15.90544, 167.322398], [-15.919773, 167.337606], [-15.928234, 167.337361], [-15.936562, 167.329271], [-15.944534, 167.333673]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_9d6807e111ecefd8777e390e4df858b4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_417558c96986fcb0c1a64db5e17dbaba = $(`<div id="html_417558c96986fcb0c1a64db5e17dbaba" style="width: 100.0%; height: 100.0%;">EMSR702-Walarano</div>`)[0];
+                popup_9d6807e111ecefd8777e390e4df858b4.setContent(html_417558c96986fcb0c1a64db5e17dbaba);
+            
+        
+
+        polygon_7e7303be2cd08920fb39b35a7ee08e23.bindPopup(popup_9d6807e111ecefd8777e390e4df858b4)
+        ;
+
+        
+    
+    
+            var polygon_cb61666c5430cbe9464ecbfd24c4418c = L.polygon(
+                [[-12.284075, 168.843474], [-12.298542, 168.848249], [-12.306456, 168.831982], [-12.30964, 168.813856], [-12.304371, 168.811403], [-12.301373, 168.811508], [-12.290468, 168.820844], [-12.281311, 168.829473], [-12.284075, 168.843474]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_bd8fc48176fcd178ec97c047e5e2e87b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7c1d2f0259546c73b71b3da4ee647bb1 = $(`<div id="html_7c1d2f0259546c73b71b3da4ee647bb1" style="width: 100.0%; height: 100.0%;">EMSR702-Tikopia</div>`)[0];
+                popup_bd8fc48176fcd178ec97c047e5e2e87b.setContent(html_7c1d2f0259546c73b71b3da4ee647bb1);
+            
+        
+
+        polygon_cb61666c5430cbe9464ecbfd24c4418c.bindPopup(popup_bd8fc48176fcd178ec97c047e5e2e87b)
+        ;
+
+        
+    
+    
+            var polygon_1c60bfced9d1bd13951c45ddc5415c9d = L.polygon(
+                [[-11.212707, 166.498531], [-11.206983, 166.509975], [-11.206719, 166.532101], [-11.213455, 166.553463], [-11.228048, 166.56834], [-11.235157, 166.569866], [-11.245259, 166.559566], [-11.242529, 166.576733], [-11.245633, 166.583981], [-11.25712, 166.580929], [-11.263218, 166.577114], [-11.270215, 166.566433], [-11.266474, 166.559566], [-11.269841, 166.544689], [-11.275078, 166.544689], [-11.279567, 166.551937], [-11.276949, 166.556515], [-11.275452, 166.564907], [-11.277323, 166.57597], [-11.291275, 166.568722], [-11.306987, 166.545834], [-11.312861, 166.530193], [-11.311738, 166.515697], [-11.30725, 166.506161], [-11.300516, 166.495861], [-11.290416, 166.493572], [-11.264229, 166.517986], [-11.263481, 166.513027], [-11.28069, 166.481365], [-11.262843, 166.471447], [-11.254502, 166.477932], [-11.245896, 166.474499], [-11.238039, 166.47755], [-11.228422, 166.488232], [-11.212707, 166.498531]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_108c3bc6f9b66d453d1d01678157a717 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f9435aff24f960ea42673f206920c893 = $(`<div id="html_f9435aff24f960ea42673f206920c893" style="width: 100.0%; height: 100.0%;">EMSR702-Utupua</div>`)[0];
+                popup_108c3bc6f9b66d453d1d01678157a717.setContent(html_f9435aff24f960ea42673f206920c893);
+            
+        
+
+        polygon_1c60bfced9d1bd13951c45ddc5415c9d.bindPopup(popup_108c3bc6f9b66d453d1d01678157a717)
+        ;
+
+        
+    
+    
+            var polygon_65b79358919cc0cfa7a5a778e6deefb1 = L.polygon(
+                [[-10.797742, 165.839978], [-10.815358, 165.839513], [-10.830549, 165.823863], [-10.799883, 165.797626], [-10.794972, 165.750861], [-10.776958, 165.748392], [-10.770505, 165.754585], [-10.769565, 165.755468], [-10.769479, 165.756178], [-10.768622, 165.756887], [-10.76673, 165.758042], [-10.764305, 165.757682], [-10.762824, 165.758129], [-10.760553, 165.757768], [-10.759589, 165.757138], [-10.757034, 165.75614], [-10.75911, 165.749833], [-10.748389, 165.753651], [-10.744224, 165.759802], [-10.741086, 165.765367], [-10.732585, 165.773923], [-10.715384, 165.787408], [-10.713314, 165.78788], [-10.707022, 165.790489], [-10.703827, 165.794876], [-10.702284, 165.790883], [-10.705379, 165.782506], [-10.704433, 165.781208], [-10.700378, 165.782014], [-10.677407, 165.791471], [-10.660161, 165.794272], [-10.648389, 165.799032], [-10.650302, 165.808731], [-10.66003, 165.822471], [-10.672462, 165.827579], [-10.684248, 165.826262], [-10.707091, 165.813312], [-10.711881, 165.807208], [-10.744846, 165.802652], [-10.751062, 165.807031], [-10.756072, 165.812855], [-10.757578, 165.818034], [-10.759404, 165.821865], [-10.754932, 165.826735], [-10.737944, 165.825182], [-10.718429, 165.828423], [-10.71455, 165.830271], [-10.706474, 165.832781], [-10.704375, 165.835538], [-10.694136, 165.842412], [-10.691235, 165.844377], [-10.684223, 165.85154], [-10.681248, 165.85355], [-10.675814, 165.860645], [-10.675068, 165.865813], [-10.673888, 165.868095], [-10.671839, 165.867899], [-10.669672, 165.86725], [-10.661041, 165.871949], [-10.65601, 165.878346], [-10.654821, 165.890668], [-10.654429, 165.900586], [-10.656571, 165.910455], [-10.656252, 165.918612], [-10.65462, 165.923665], [-10.651883, 165.9265], [-10.651339, 165.932011], [-10.65326, 165.935075], [-10.65654, 165.937185], [-10.654767, 165.938401], [-10.65436, 165.942253], [-10.658048, 165.945312], [-10.659268, 165.949022], [-10.657503, 165.960618], [-10.658914, 165.961628], [-10.662525, 165.962838], [-10.660523, 165.963848], [-10.658718, 165.967282], [-10.65952, 165.976567], [-10.658302, 165.983593], [-10.658557, 166.010635], [-10.654348, 166.016916], [-10.652484, 166.022993], [-10.649099, 166.033686], [-10.649643, 166.053833], [-10.653441, 166.066384], [-10.66419, 166.085616], [-10.686525, 165.877489], [-10.797742, 165.839978]],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_7d4896a0f81721ec13e5b60933612e78 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_96735118633a9f5b33da296fa97583a2 = $(`<div id="html_96735118633a9f5b33da296fa97583a2" style="width: 100.0%; height: 100.0%;">EMSR702-Nendo</div>`)[0];
+                popup_7d4896a0f81721ec13e5b60933612e78.setContent(html_96735118633a9f5b33da296fa97583a2);
+            
+        
+
+        polygon_65b79358919cc0cfa7a5a778e6deefb1.bindPopup(popup_7d4896a0f81721ec13e5b60933612e78)
+        ;
+
+        
+    
+    
+            var polygon_c1eafe07eb1b1eda28169e0b5dfcbc21 = L.polygon(
+                [[-11.614664, 166.997909], [-11.62916, 167.001812], [-11.64286, 166.99742], [-11.651465, 166.981481], [-11.659589, 166.968147], [-11.664208, 166.957578], [-11.664208, 166.957253], [-11.664206, 166.956277], [-11.664208, 166.956765], [-11.664208, 166.956277], [-11.664208, 166.955952], [-11.664527, 166.955302], [-11.665482, 166.954976], [-11.666438, 166.954489], [-11.667074, 166.955139], [-11.668985, 166.956439], [-11.672169, 166.961969], [-11.668188, 166.969123], [-11.671372, 166.978229], [-11.672168, 166.978718], [-11.675193, 166.980507], [-11.680607, 166.983111], [-11.687933, 166.988318], [-11.699081, 166.992877], [-11.711656, 166.974656], [-11.71235, 166.957933], [-11.70172, 166.952708], [-11.696284, 166.94839], [-11.696718, 166.946019], [-11.700151, 166.945035], [-11.710374, 166.947113], [-11.712349, 166.946063], [-11.710939, 166.941913], [-11.713051, 166.934755], [-11.717121, 166.92973], [-11.717539, 166.919621], [-11.72075, 166.914227], [-11.721026, 166.911197], [-11.722001, 166.901261], [-11.724918, 166.897356], [-11.725054, 166.888166], [-11.718615, 166.874398], [-11.704297, 166.844319], [-11.701174, 166.837537], [-11.68948, 166.830349], [-11.685989, 166.825681], [-11.681299, 166.81846], [-11.664916, 166.81123], [-11.654389, 166.809228], [-11.644251, 166.804447], [-11.638793, 166.797693], [-11.628277, 166.791361], [-11.620855, 166.787347], [-11.603684, 166.791671], [-11.592801, 166.812401], [-11.584626, 166.819971], [-11.584644, 166.829935], [-11.590521, 166.847867], [-11.587474, 166.880553], [-11.582397, 166.890866], [-11.611669, 166.939021], [-11.63125, 166.931654], [-11.655029, 166.935036], [-11.660881, 166.93692], [-11.661631, 166.942297], [-11.660976, 166.947607], [-11.656642, 166.945464], [-11.650919, 166.94859], [-11.647641, 166.945796], [-11.640315, 166.943875], [-11.635757, 166.946914], [-11.632957, 166.953888], [-11.629835, 166.955831], [-11.623624, 166.957089], [-11.615651, 166.959883], [-11.609119, 166.96819], [-11.607414, 166.975074], [-11.614664, 166.997909]],
+                {"bubblingMouseEvents": true, "color": "lightred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_0b4db6ee68f7ff451e9b4ad3a02948a4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3aff5a7fa6d79f7a5144e6e030bdda2e = $(`<div id="html_3aff5a7fa6d79f7a5144e6e030bdda2e" style="width: 100.0%; height: 100.0%;">EMSR702-Naunonga</div>`)[0];
+                popup_0b4db6ee68f7ff451e9b4ad3a02948a4.setContent(html_3aff5a7fa6d79f7a5144e6e030bdda2e);
+            
+        
+
+        polygon_c1eafe07eb1b1eda28169e0b5dfcbc21.bindPopup(popup_0b4db6ee68f7ff451e9b4ad3a02948a4)
+        ;
+
+        
+    
+    
+            var polygon_7ad277831ff2f4118d9b784fffbef88b = L.polygon(
+                [[-15.259044, 167.989741], [-15.290358, 167.999606], [-15.352266, 167.953674], [-15.389636, 167.941124], [-15.447026, 167.888058], [-15.478964, 167.83914], [-15.473078, 167.70289], [-15.459495, 167.674282], [-15.420187, 167.665998], [-15.389382, 167.706919], [-15.340324, 167.774597], [-15.311555, 167.816837], [-15.259044, 167.989741]],
+                {"bubblingMouseEvents": true, "color": "beige", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "beige", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_5a612a9773403c6d323c984172c26328 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_845cfbcfcacf88fb236c0ebe8b7eee07 = $(`<div id="html_845cfbcfcacf88fb236c0ebe8b7eee07" style="width: 100.0%; height: 100.0%;">EMSR702-Ambae</div>`)[0];
+                popup_5a612a9773403c6d323c984172c26328.setContent(html_845cfbcfcacf88fb236c0ebe8b7eee07);
+            
+        
+
+        polygon_7ad277831ff2f4118d9b784fffbef88b.bindPopup(popup_5a612a9773403c6d323c984172c26328)
+        ;
+
+        
+    
+    
+            var polygon_4255a3b08088eabb26a636fbbd7c26b7 = L.polygon(
+                [[-15.103626, 168.074769], [-15.083476, 168.076292], [-15.046475, 168.065665], [-15.021093, 168.064835], [-15.011645, 168.062534], [-15.003032, 168.054357], [-14.999635, 168.054027], [-14.999917, 168.054324], [-14.990566, 168.054809], [-14.96957, 168.054579], [-14.948515, 168.05309], [-14.935463, 168.044492], [-14.910945, 168.037135], [-14.900373, 168.034944], [-14.898081, 168.036094], [-14.8955, 168.03842], [-14.888996, 168.04574], [-14.893739, 168.055783], [-14.89186, 168.076322], [-14.899909, 168.082548], [-14.915625, 168.085264], [-14.927744, 168.093378], [-14.937874, 168.098281], [-14.954151, 168.100026], [-14.971921, 168.105897], [-14.973988, 168.107553], [-14.985484, 168.1108], [-15.010173, 168.113199], [-15.023052, 168.127401], [-15.043352, 168.13378], [-15.058586, 168.132224], [-15.079279, 168.135554], [-15.11297, 168.149555], [-15.151248, 168.153488], [-15.169689, 168.163736], [-15.174779, 168.170558], [-15.184857, 168.1744], [-15.189013, 168.173091], [-15.197132, 168.168689], [-15.219098, 168.179039], [-15.234484, 168.179798], [-15.251968, 168.175795], [-15.261126, 168.171823], [-15.269256, 168.179311], [-15.28005, 168.170976], [-15.288816, 168.177785], [-15.302181, 168.172846], [-15.306699, 168.181637], [-15.313823, 168.188087], [-15.332675, 168.183521], [-15.363776, 168.186115], [-15.375143, 168.17346], [-15.379639, 168.183212], [-15.391333, 168.16886], [-15.394959, 168.151425], [-15.389842, 168.129199], [-15.383689, 168.121241], [-15.37988, 168.121704], [-15.370397, 168.130105], [-15.358911, 168.126473], [-15.340996, 168.122791], [-15.333685, 168.117397], [-15.321423, 168.115962], [-15.286222, 168.108384], [-15.272961, 168.109337], [-15.265362, 168.113659], [-15.240626, 168.111978], [-15.208082, 168.106179], [-15.152833, 168.09793], [-15.138064, 168.089596], [-15.103626, 168.074769]],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_ff2187b0046a48eebaa192cd044c495d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_44a9bef4fd82df34a7c0ce17719b9704 = $(`<div id="html_44a9bef4fd82df34a7c0ce17719b9704" style="width: 100.0%; height: 100.0%;">EMSR702-Maewo</div>`)[0];
+                popup_ff2187b0046a48eebaa192cd044c495d.setContent(html_44a9bef4fd82df34a7c0ce17719b9704);
+            
+        
+
+        polygon_4255a3b08088eabb26a636fbbd7c26b7.bindPopup(popup_ff2187b0046a48eebaa192cd044c495d)
+        ;
+
+        
+    
+    
+            var polygon_f3ace53c5c9601766115af93516e4138 = L.polygon(
+                [[-15.543493, 167.140759], [-15.54909, 167.194161], [-15.554395, 167.207718], [-15.561842, 167.214966], [-15.569091, 167.208112], [-15.571292, 167.211078], [-15.568221, 167.21907], [-15.572292, 167.228391], [-15.576813, 167.252708], [-15.572049, 167.257768], [-15.561785, 167.272177], [-15.551184, 167.274279], [-15.54249, 167.280254], [-15.539264, 167.282149], [-15.537582, 167.285353], [-15.536741, 167.28681], [-15.54025, 167.291031], [-15.543807, 167.293696], [-15.556808, 167.298011], [-15.559474, 167.298738], [-15.563262, 167.299465], [-15.575887, 167.2964], [-15.58388, 167.288823], [-15.591871, 167.277457], [-15.597327, 167.263617], [-15.597909, 167.251699], [-15.596775, 167.242489], [-15.595695, 167.231262], [-15.610439, 167.21862], [-15.615497, 167.197817], [-15.620576, 167.196569], [-15.625966, 167.205889], [-15.628069, 167.220463], [-15.627881, 167.227416], [-15.632016, 167.238952], [-15.631978, 167.250873], [-15.650506, 167.256756], [-15.68516, 167.246797], [-15.685757, 167.245866], [-15.686653, 167.244623], [-15.687249, 167.24245], [-15.686763, 167.241252], [-15.686071, 167.240392], [-15.68759, 167.236365], [-15.691602, 167.23592], [-15.700726, 167.239762], [-15.703628, 167.243193], [-15.708191, 167.250344], [-15.707775, 167.255078], [-15.705568, 167.255807], [-15.699082, 167.257419], [-15.697563, 167.25958], [-15.700052, 167.262724], [-15.705299, 167.265132], [-15.71784, 167.263912], [-15.723481, 167.26216], [-15.73254, 167.250374], [-15.738674, 167.245475], [-15.74131, 167.243751], [-15.745959, 167.239155], [-15.749872, 167.228634], [-15.758894, 167.217425], [-15.756686, 167.203445], [-15.716992, 167.131188], [-15.718321, 167.125167], [-15.70292, 167.099382], [-15.68885, 167.089575], [-15.676321, 167.079527], [-15.650598, 167.087368], [-15.648571, 167.085709], [-15.638015, 167.090272], [-15.634201, 167.091889], [-15.625245, 167.10979], [-15.623492, 167.148889], [-15.623077, 167.177057], [-15.613394, 167.1717], [-15.610183, 167.131624], [-15.599789, 167.118305], [-15.606981, 167.095035], [-15.593691, 167.091273], [-15.546971, 167.127274], [-15.543493, 167.140759]],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_60326e08979ed175c5f8e3ca53d8b98f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f665ae39668a0b9a46f73438ad3e4ab5 = $(`<div id="html_f665ae39668a0b9a46f73438ad3e4ab5" style="width: 100.0%; height: 100.0%;">EMSR702-Abnetare</div>`)[0];
+                popup_60326e08979ed175c5f8e3ca53d8b98f.setContent(html_f665ae39668a0b9a46f73438ad3e4ab5);
+            
+        
+
+        polygon_f3ace53c5c9601766115af93516e4138.bindPopup(popup_60326e08979ed175c5f8e3ca53d8b98f)
+        ;
+
+        
+    
+    
+            var polygon_9c489457c0f3ff80a897d6cc5ceb5008 = L.polygon(
+                [[-16.137378, 167.217207], [-16.143214, 167.234457], [-16.144512, 167.236898], [-16.145475, 167.238237], [-16.144719, 167.240025], [-16.143185, 167.240677], [-16.14345, 167.241245], [-16.145299, 167.240351], [-16.145787, 167.238671], [-16.149533, 167.239459], [-16.152874, 167.242103], [-16.153441, 167.242322], [-16.155155, 167.241137], [-16.157991, 167.235185], [-16.158552, 167.234063], [-16.157102, 167.232769], [-16.155797, 167.231654], [-16.153105, 167.229751], [-16.151664, 167.229832], [-16.149733, 167.229588], [-16.149162, 167.230132], [-16.148265, 167.230839], [-16.147531, 167.23073], [-16.146715, 167.230023], [-16.145818, 167.228038], [-16.145192, 167.226216], [-16.145165, 167.225183], [-16.146062, 167.223578], [-16.147803, 167.220914], [-16.145573, 167.21678], [-16.142817, 167.212969], [-16.137378, 167.217207]],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_6cca51073ffc20756d305aac4cfb23f8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b9ccfee1ab11bc9a92a77596e98eb6de = $(`<div id="html_b9ccfee1ab11bc9a92a77596e98eb6de" style="width: 100.0%; height: 100.0%;">EMSR702-Leviamp</div>`)[0];
+                popup_6cca51073ffc20756d305aac4cfb23f8.setContent(html_b9ccfee1ab11bc9a92a77596e98eb6de);
+            
+        
+
+        polygon_9c489457c0f3ff80a897d6cc5ceb5008.bindPopup(popup_6cca51073ffc20756d305aac4cfb23f8)
+        ;
+
+        
+    
+    
+            var polygon_de2118d075230ea4414591b5bb4b14d8 = L.polygon(
+                [[-16.129498, 167.292189], [-16.134007, 167.293516], [-16.145148, 167.284851], [-16.149484, 167.274553], [-16.136777, 167.265032], [-16.122895, 167.281615], [-16.108671, 167.282573], [-16.107834, 167.289044], [-16.113192, 167.299793], [-16.112442, 167.308151], [-16.120231, 167.315033], [-16.125254, 167.295726], [-16.129498, 167.292189]],
+                {"bubblingMouseEvents": true, "color": "darkpurple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkpurple", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_698cc95967e59f98f7050a9ea2804c50 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6405845a5910b2019dd2f9f046701088 = $(`<div id="html_6405845a5910b2019dd2f9f046701088" style="width: 100.0%; height: 100.0%;">EMSR702-Brenwe</div>`)[0];
+                popup_698cc95967e59f98f7050a9ea2804c50.setContent(html_6405845a5910b2019dd2f9f046701088);
+            
+        
+
+        polygon_de2118d075230ea4414591b5bb4b14d8.bindPopup(popup_698cc95967e59f98f7050a9ea2804c50)
+        ;
+
+        
+    
+    
+            var polygon_c53b05e658a48ed9c9e7075c0c1a749b = L.polygon(
+                [[-16.037367, 167.386309], [-16.01066, 167.395637], [-16.007804, 167.403536], [-16.011992, 167.409342], [-16.013991, 167.409342], [-16.020653, 167.402965], [-16.034074, 167.409818], [-16.048674, 167.399615], [-16.05547, 167.394647], [-16.05981, 167.396988], [-16.060438, 167.402356], [-16.056897, 167.406982], [-16.052843, 167.410865], [-16.052843, 167.413892], [-16.071586, 167.421525], [-16.078335, 167.416893], [-16.081196, 167.411571], [-16.086526, 167.415663], [-16.097567, 167.427561], [-16.107565, 167.455691], [-16.11689, 167.449466], [-16.120804, 167.43421], [-16.103821, 167.402536], [-16.061701, 167.375646], [-16.054213, 167.37386], [-16.041421, 167.378486], [-16.037367, 167.386309]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_2915e824a8c951b54b3f31be10fb6a71 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cda6bc495ac3d9a9cb2a6720ab2d875f = $(`<div id="html_cda6bc495ac3d9a9cb2a6720ab2d875f" style="width: 100.0%; height: 100.0%;">EMSR702-Lakatori</div>`)[0];
+                popup_2915e824a8c951b54b3f31be10fb6a71.setContent(html_cda6bc495ac3d9a9cb2a6720ab2d875f);
+            
+        
+
+        polygon_c53b05e658a48ed9c9e7075c0c1a749b.bindPopup(popup_2915e824a8c951b54b3f31be10fb6a71)
+        ;
+
+        
+    
+    
+            var polygon_fb09252925ec9c2da6ad1e6dbc8dc334 = L.polygon(
+                [[-15.51583, 168.195158], [-15.579468, 168.203667], [-15.599693, 168.191918], [-15.658734, 168.208426], [-15.665277, 168.220769], [-15.676431, 168.222702], [-15.684759, 168.216456], [-15.697549, 168.224487], [-15.749599, 168.23341], [-15.759712, 168.240994], [-15.789426, 168.251405], [-15.83178, 168.257353], [-15.842726, 168.268299], [-15.853909, 168.272344], [-15.901736, 168.277817], [-15.921962, 168.284003], [-15.930052, 168.282338], [-15.946708, 168.273058], [-15.972168, 168.276389], [-16.006432, 168.247597], [-16.01833, 168.214285], [-16.008812, 168.195963], [-15.977879, 168.179069], [-15.952419, 168.190014], [-15.940521, 168.180021], [-15.912444, 168.185731], [-15.87461, 168.166458], [-15.829163, 168.160985], [-15.785143, 168.159557], [-15.764679, 168.136477], [-15.729701, 168.127435], [-15.679257, 168.107447], [-15.638092, 168.106495], [-15.573608, 168.124817], [-15.531254, 168.134811], [-15.469626, 168.135049], [-15.456496, 168.139764], [-15.447587, 168.149472], [-15.447987, 168.164034], [-15.450957, 168.170602], [-15.45741, 168.171915], [-15.470259, 168.167803], [-15.472315, 168.164605], [-15.500713, 168.162079], [-15.506294, 168.169745], [-15.511362, 168.173463], [-15.510634, 168.189847], [-15.51583, 168.195158]],
+                {"bubblingMouseEvents": true, "color": "pink", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_ef55e389962dd48e50c35798f74942c6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2cf599d50615495b6e1441583945ec51 = $(`<div id="html_2cf599d50615495b6e1441583945ec51" style="width: 100.0%; height: 100.0%;">EMSR702-Pentecoste</div>`)[0];
+                popup_ef55e389962dd48e50c35798f74942c6.setContent(html_2cf599d50615495b6e1441583945ec51);
+            
+        
+
+        polygon_fb09252925ec9c2da6ad1e6dbc8dc334.bindPopup(popup_ef55e389962dd48e50c35798f74942c6)
+        ;
+
+        
+    
+    
+            var polygon_282182b2190e104e1589b3abf8e83c49 = L.polygon(
+                [[-16.101379, 168.12738], [-16.097778, 168.132446], [-16.096863, 168.132874], [-16.093689, 168.145203], [-16.093811, 168.171631], [-16.108398, 168.18811], [-16.131958, 168.196716], [-16.155396, 168.199097], [-16.163635, 168.207886], [-16.179138, 168.207703], [-16.185303, 168.211426], [-16.218445, 168.223938], [-16.233154, 168.223328], [-16.243164, 168.229004], [-16.246277, 168.244873], [-16.257141, 168.268433], [-16.269226, 168.281616], [-16.269226, 168.287964], [-16.277466, 168.296143], [-16.288818, 168.307983], [-16.306213, 168.316162], [-16.315674, 168.317444], [-16.340759, 168.307983], [-16.360657, 168.276306], [-16.36615, 168.231201], [-16.35791, 168.209656], [-16.367493, 168.190552], [-16.362, 168.160583], [-16.369568, 168.151367], [-16.375488, 168.128906], [-16.358337, 168.092163], [-16.352417, 168.06488], [-16.344604, 168.045532], [-16.340088, 168.032776], [-16.330933, 168.031677], [-16.327087, 168.023743], [-16.331055, 168.016052], [-16.329102, 168.007507], [-16.319824, 168.002197], [-16.318298, 167.992737], [-16.315308, 167.982849], [-16.304138, 167.976685], [-16.299927, 167.961975], [-16.284668, 167.954224], [-16.27948, 167.947876], [-16.280151, 167.942566], [-16.275757, 167.930908], [-16.268127, 167.915527], [-16.25592, 167.914856], [-16.251404, 167.91156], [-16.239746, 167.907593], [-16.230103, 167.907593], [-16.222595, 167.909607], [-16.212463, 167.915771], [-16.210388, 167.921448], [-16.211914, 167.937988], [-16.209839, 167.958618], [-16.203796, 167.970093], [-16.193909, 167.979797], [-16.19281, 167.987488], [-16.191711, 168.004211], [-16.188477, 168.034973], [-16.19281, 168.046204], [-16.17804, 168.062256], [-16.172791, 168.074341], [-16.154602, 168.088867], [-16.150085, 168.101624], [-16.140564, 168.113281], [-16.14032, 168.11438], [-16.107849, 168.128296], [-16.101379, 168.12738]],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_28b51d6dc3e2ce7b884010f1ed2fd1a3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a9ba51d209a833933d5cc33c1370feea = $(`<div id="html_a9ba51d209a833933d5cc33c1370feea" style="width: 100.0%; height: 100.0%;">EMSR702-Ambrym</div>`)[0];
+                popup_28b51d6dc3e2ce7b884010f1ed2fd1a3.setContent(html_a9ba51d209a833933d5cc33c1370feea);
+            
+        
+
+        polygon_282182b2190e104e1589b3abf8e83c49.bindPopup(popup_28b51d6dc3e2ce7b884010f1ed2fd1a3)
+        ;
+
+        
+    
+    
+            var polygon_72f0d7d242165649e473911d81c57fce = L.polygon(
+                [[-9.853976, 167.169021], [-9.857251, 167.178064], [-9.863731, 167.183334], [-9.86957, 167.191167], [-9.875694, 167.191808], [-9.892784, 167.196151], [-9.899193, 167.195867], [-9.903751, 167.190384], [-9.903039, 167.184117], [-9.896416, 167.172653], [-9.887657, 167.166315], [-9.868787, 167.161829], [-9.863945, 167.157343], [-9.858035, 167.157627], [-9.853904, 167.158411], [-9.853976, 167.169021]],
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_077dc44939277a89e2613b3fa3c18a1d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ba638817a38242ddd2109efb9144ffe0 = $(`<div id="html_ba638817a38242ddd2109efb9144ffe0" style="width: 100.0%; height: 100.0%;">EMSR702-Taumako</div>`)[0];
+                popup_077dc44939277a89e2613b3fa3c18a1d.setContent(html_ba638817a38242ddd2109efb9144ffe0);
+            
+        
+
+        polygon_72f0d7d242165649e473911d81c57fce.bindPopup(popup_077dc44939277a89e2613b3fa3c18a1d)
+        ;
+
+        
+    
+    
+            var polygon_29934c063a4669079a8488ea48bd2dd9 = L.polygon(
+                [[53.847276, 9.341151], [54.886985, 9.341151], [54.886985, 13.772269], [53.847276, 13.772269], [53.847276, 9.341151]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_a763a54a2d9e55ca1afe314978405742 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_114541a9023bfc8d0769df488a44f5ce = $(`<div id="html_114541a9023bfc8d0769df488a44f5ce" style="width: 100.0%; height: 100.0%;"><b>EMSR701 - Flood in Schleswig Holstein region, Germany</b><br><br>On 19 October 2023, coastal flooding was reported to have affected especially the State of Schleswig Holstein, Germany. The event is ongoing, water levels are still rising with an expected peak of up to 2.0 m above average in the late evening of 20.10.2023, and therefore, damage is expected to affect urban areas. On Saturday (21.10.2023), a rapid decrease in water levels is predicted. Copernicus EMS Rapid Mapping is requested to provide an initial rough estimation, flood extent, and damage assessment emergency mapping.<br><br><b>Roads [km]:</b> 5.2<br><b>max_extent:</b>  -<br><b>Built-up [No.]:</b> 6353<br><b>Population [No.]:</b> Not Available<br><b>Airfield runways [ha]:</b> 7.9</div>`)[0];
+                popup_a763a54a2d9e55ca1afe314978405742.setContent(html_114541a9023bfc8d0769df488a44f5ce);
+            
+        
+
+        polygon_29934c063a4669079a8488ea48bd2dd9.bindPopup(popup_a763a54a2d9e55ca1afe314978405742)
+        ;
+
+        
+    
+    
+            var polygon_c2f1b042f3d7013d5dbe810c55c124c3 = L.polygon(
+                [[54.831631, 9.652982], [54.828378, 9.6677], [54.81074, 9.747334], [54.799837, 9.799324], [54.777372, 9.834952], [54.772802, 9.875989], [54.783192, 9.893318], [54.790062, 9.894723], [54.79022, 9.900441], [54.791372, 9.902396], [54.794396, 9.903776], [54.801347, 9.903773], [54.800484, 9.917176], [54.783487, 9.957183], [54.742426, 9.958011], [54.738289, 9.342417], [54.801101, 9.341151], [54.800148, 9.343731], [54.802078, 9.345334], [54.803578, 9.341983], [54.80708, 9.343129], [54.806629, 9.346536], [54.814404, 9.354688], [54.815137, 9.356241], [54.816178, 9.360602], [54.816117, 9.361052], [54.815994, 9.361962], [54.815953, 9.362263], [54.815098, 9.362618], [54.815251, 9.363188], [54.815342, 9.363523], [54.816628, 9.362576], [54.817307, 9.363801], [54.818386, 9.366836], [54.819058, 9.367233], [54.819329, 9.370869], [54.821125, 9.373885], [54.821503, 9.373047], [54.822167, 9.372532], [54.823185, 9.373996], [54.824951, 9.374032], [54.825825, 9.375499], [54.82721, 9.374884], [54.828552, 9.375426], [54.829132, 9.376241], [54.830605, 9.375207], [54.831173, 9.374281], [54.832131, 9.374753], [54.833278, 9.37464], [54.833585, 9.376537], [54.833077, 9.378787], [54.834141, 9.380084], [54.835148, 9.380554], [54.835396, 9.381543], [54.837349, 9.380911], [54.839138, 9.382852], [54.839001, 9.383666], [54.838463, 9.386893], [54.838318, 9.387762], [54.838307, 9.391656], [54.838719, 9.395291], [54.83931, 9.397098], [54.839077, 9.397767], [54.839558, 9.399516], [54.840458, 9.402786], [54.838841, 9.403572], [54.839863, 9.404644], [54.842312, 9.407212], [54.84256, 9.40803], [54.84261, 9.408199], [54.842504, 9.408906], [54.8424, 9.409609], [54.842331, 9.410077], [54.842232, 9.410766], [54.842156, 9.411275], [54.841881, 9.411725], [54.841716, 9.411997], [54.841496, 9.412359], [54.841389, 9.412536], [54.841179, 9.412879], [54.840973, 9.413219], [54.840668, 9.413718], [54.840271, 9.414371], [54.839978, 9.414851], [54.839531, 9.415589], [54.838887, 9.416645], [54.838005, 9.418093], [54.83643, 9.418216], [54.836045, 9.417032], [54.835842, 9.416408], [54.835564, 9.416339], [54.835282, 9.416271], [54.83445, 9.416067], [54.834309, 9.416033], [54.833802, 9.416247], [54.833664, 9.416304], [54.83326, 9.416475], [54.832268, 9.417825], [54.832306, 9.418203], [54.832332, 9.418446], [54.832371, 9.418816], [54.832108, 9.419789], [54.831957, 9.420152], [54.831295, 9.421412], [54.830034, 9.423617], [54.828987, 9.42545], [54.827844, 9.42722], [54.827102, 9.428654], [54.827059, 9.435261], [54.827966, 9.437523], [54.832766, 9.449295], [54.833132, 9.456291], [54.833341, 9.460288], [54.831587, 9.463067], [54.836991, 9.482714], [54.841079, 9.497586], [54.846228, 9.507498], [54.846418, 9.507864], [54.869055, 9.551491], [54.886097, 9.584387], [54.886985, 9.591886], [54.882831, 9.612742], [54.867719, 9.616802], [54.854583, 9.604618], [54.842138, 9.625997], [54.837387, 9.626907], [54.831631, 9.652982]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_840d8ccf228d04408a40f0393ab97edd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b500b44e0abd6c05015e843ecf1e3ba9 = $(`<div id="html_b500b44e0abd6c05015e843ecf1e3ba9" style="width: 100.0%; height: 100.0%;">EMSR701-Flensburg Fjord</div>`)[0];
+                popup_840d8ccf228d04408a40f0393ab97edd.setContent(html_b500b44e0abd6c05015e843ecf1e3ba9);
+            
+        
+
+        polygon_c2f1b042f3d7013d5dbe810c55c124c3.bindPopup(popup_840d8ccf228d04408a40f0393ab97edd)
+        ;
+
+        
+    
+    
+            var polygon_1eb8699115ec9d90a7d515a64b116dd6 = L.polygon(
+                [[54.706044, 10.052175], [54.642517, 10.052175], [54.642517, 9.895172], [54.706044, 9.895172], [54.706044, 10.052175]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_774e8e3fe3be832c42e1775c077b912a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_86b86d56d5ce7b2416b90182d50f1357 = $(`<div id="html_86b86d56d5ce7b2416b90182d50f1357" style="width: 100.0%; height: 100.0%;">EMSR701-Kappeln</div>`)[0];
+                popup_774e8e3fe3be832c42e1775c077b912a.setContent(html_86b86d56d5ce7b2416b90182d50f1357);
+            
+        
+
+        polygon_1eb8699115ec9d90a7d515a64b116dd6.bindPopup(popup_774e8e3fe3be832c42e1775c077b912a)
+        ;
+
+        
+    
+    
+            var polygon_56ae3a946f641d0f6178d224d5c77d67 = L.polygon(
+                [[54.491523, 9.7765], [54.484802, 9.496365], [54.558242, 9.49425], [54.566089, 9.743052], [54.503011, 9.748207], [54.503274, 9.964896], [54.483666, 9.9349], [54.464157, 9.862014], [54.456921, 9.87663], [54.457867, 9.913878], [54.459118, 9.939716], [54.431026, 9.964089], [54.43062, 9.780025], [54.491523, 9.7765]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_94ac4f407139ef20fa8255512b6a5f8a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b6d7a3f022a6860b7c3176e7c19a275e = $(`<div id="html_b6d7a3f022a6860b7c3176e7c19a275e" style="width: 100.0%; height: 100.0%;">EMSR701-Eckernforde</div>`)[0];
+                popup_94ac4f407139ef20fa8255512b6a5f8a.setContent(html_b6d7a3f022a6860b7c3176e7c19a275e);
+            
+        
+
+        polygon_56ae3a946f641d0f6178d224d5c77d67.bindPopup(popup_94ac4f407139ef20fa8255512b6a5f8a)
+        ;
+
+        
+    
+    
+            var polygon_cfe48d509eb53718b04b39a23beef9d9 = L.polygon(
+                [[54.275355, 10.013249], [54.4374, 10.007857], [54.440722, 10.302507], [54.27869, 10.307899], [54.275355, 10.013249]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_fe5341f2a0cee6219d1609a4f9cdb0a0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8e3435ab0302eb276d495da0120b1256 = $(`<div id="html_8e3435ab0302eb276d495da0120b1256" style="width: 100.0%; height: 100.0%;">EMSR701-Kiel</div>`)[0];
+                popup_fe5341f2a0cee6219d1609a4f9cdb0a0.setContent(html_8e3435ab0302eb276d495da0120b1256);
+            
+        
+
+        polygon_cfe48d509eb53718b04b39a23beef9d9.bindPopup(popup_fe5341f2a0cee6219d1609a4f9cdb0a0)
+        ;
+
+        
+    
+    
+            var polygon_908ee852bc9606c88f729cf83eaaaef6 = L.polygon(
+                [[53.966957, 10.883232], [53.959461, 10.894026], [53.958555, 10.90318], [53.971895, 10.943486], [53.977135, 10.953361], [53.977091, 10.987711], [53.847276, 10.987711], [53.847276, 10.640414], [53.977091, 10.640414], [53.977195, 10.885969], [53.966957, 10.883232]],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_8487d02df5e6a9727cb2667cc5fb953a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ceb1e561868af61f1b9b7f3ff7029bb1 = $(`<div id="html_ceb1e561868af61f1b9b7f3ff7029bb1" style="width: 100.0%; height: 100.0%;">EMSR701-Untertrave</div>`)[0];
+                popup_8487d02df5e6a9727cb2667cc5fb953a.setContent(html_ceb1e561868af61f1b9b7f3ff7029bb1);
+            
+        
+
+        polygon_908ee852bc9606c88f729cf83eaaaef6.bindPopup(popup_8487d02df5e6a9727cb2667cc5fb953a)
+        ;
+
+        
+    
+    
+            var polygon_0f023fd2c48aff1a4722645a466d2c5d = L.polygon(
+                [[53.945495, 11.353978], [53.936693, 11.370339], [53.945814, 11.387197], [53.939131, 11.409485], [53.946439, 11.427866], [53.938166, 11.43229], [53.930521, 11.410022], [53.917377, 11.421095], [53.918801, 11.450335], [53.943254, 11.469835], [53.954919, 11.446193], [53.958638, 11.391975], [53.977408, 11.367437], [54.006971, 11.365666], [54.029587, 11.452633], [54.031366, 11.523669], [53.859975, 11.523669], [53.859975, 11.363335], [53.945495, 11.353978]],
+                {"bubblingMouseEvents": true, "color": "lightred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_af8ed574bd4dbc4d5d206e1a238dc25b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7faee1c2e2957afc0c4eb6a4756acd8e = $(`<div id="html_7faee1c2e2957afc0c4eb6a4756acd8e" style="width: 100.0%; height: 100.0%;">EMSR701-Wismar</div>`)[0];
+                popup_af8ed574bd4dbc4d5d206e1a238dc25b.setContent(html_7faee1c2e2957afc0c4eb6a4756acd8e);
+            
+        
+
+        polygon_0f023fd2c48aff1a4722645a466d2c5d.bindPopup(popup_af8ed574bd4dbc4d5d206e1a238dc25b)
+        ;
+
+        
+    
+    
+            var polygon_44d28504c3bf4517aedd6a6549031ba1 = L.polygon(
+                [[54.373211, 12.39542], [54.488365, 12.488246], [54.501902, 12.558269], [54.462451, 12.570944], [54.449846, 12.87763], [54.476249, 13.045661], [54.599782, 13.085018], [54.617027, 13.162991], [54.381413, 13.162991], [54.373211, 12.39542]],
+                {"bubblingMouseEvents": true, "color": "beige", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "beige", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_286499495f7396eacb077cb691b28144 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c1eefe40088986e0c40eed8b252f67c9 = $(`<div id="html_c1eefe40088986e0c40eed8b252f67c9" style="width: 100.0%; height: 100.0%;">EMSR701-Zingst</div>`)[0];
+                popup_286499495f7396eacb077cb691b28144.setContent(html_c1eefe40088986e0c40eed8b252f67c9);
+            
+        
+
+        polygon_44d28504c3bf4517aedd6a6549031ba1.bindPopup(popup_286499495f7396eacb077cb691b28144)
+        ;
+
+        
+    
+    
+            var polygon_4f13a0d71458363d7363dec142dbbf3b = L.polygon(
+                [[54.360609, 13.731688], [54.341427, 13.772269], [54.324604, 13.743892], [54.310277, 13.726391], [54.27237, 13.73022], [54.267084, 13.718718], [54.264903, 13.700404], [54.2796, 13.677336], [54.287197, 13.647933], [54.315033, 13.600903], [54.385535, 13.601424], [54.394029, 13.698614], [54.360609, 13.731688]],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_5d562b0768897eb2fa7862abbf558eba = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_93718b442ae4cdf58d71a39b0ae34c3d = $(`<div id="html_93718b442ae4cdf58d71a39b0ae34c3d" style="width: 100.0%; height: 100.0%;">EMSR701-Ruegen</div>`)[0];
+                popup_5d562b0768897eb2fa7862abbf558eba.setContent(html_93718b442ae4cdf58d71a39b0ae34c3d);
+            
+        
+
+        polygon_4f13a0d71458363d7363dec142dbbf3b.bindPopup(popup_5d562b0768897eb2fa7862abbf558eba)
+        ;
+
+        
+    
+    
+            var polygon_bb2ffac9a731b7ade24c817cb7878442 = L.polygon(
+                [[45.508214, 18.651564], [45.527363, 18.651564], [45.527363, 18.688833], [45.508214, 18.688833], [45.508214, 18.651564]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_65ef713a017f7704651d4f20d4f025cb = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_7b88e7e90271f6b00d40b59fec3211e0 = $(`<div id="html_7b88e7e90271f6b00d40b59fec3211e0" style="width: 100.0%; height: 100.0%;"><b>EMSR699 - Industrial accident in Osijek, Croatia</b><br><br>On the 4 October 2023, in the early hours of the day, a fire broke out in the industrial zone of Drava International company, located in the southern part of the city of Osijek, Croatia. The event is under control with damages reported to affect storage facilities. In addition, the smoke emanating from the fire posed a significant risk to both human and animal health. Copernicus EMS Rapid Mapping is requested to provide damage assessment emergency mapping.<br><br><b>Roads [km]:</b> 5.2<br><b>max_extent:</b>  -<br><b>Built-up [No.]:</b> 6353<br><b>Population [No.]:</b> Not Available<br><b>Airfield runways [ha]:</b> 7.9</div>`)[0];
+                popup_65ef713a017f7704651d4f20d4f025cb.setContent(html_7b88e7e90271f6b00d40b59fec3211e0);
+            
+        
+
+        polygon_bb2ffac9a731b7ade24c817cb7878442.bindPopup(popup_65ef713a017f7704651d4f20d4f025cb)
+        ;
+
+        
+    
+    
+            var polygon_a3074571233dc3c8bd8e7f8c0e4b6b19 = L.polygon(
+                [[45.508214, 18.651564], [45.527363, 18.65208], [45.52712, 18.688582], [45.508273, 18.688833], [45.508214, 18.651564]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_122ad766e60b0622f6421176fc6bc8c4);
+        
+    
+        var popup_56878b956534f3807c727b6779561304 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_95259c7b17ecb1e806576a5a3c64fb8a = $(`<div id="html_95259c7b17ecb1e806576a5a3c64fb8a" style="width: 100.0%; height: 100.0%;">EMSR699-Brijest</div>`)[0];
+                popup_56878b956534f3807c727b6779561304.setContent(html_95259c7b17ecb1e806576a5a3c64fb8a);
+            
+        
+
+        polygon_a3074571233dc3c8bd8e7f8c0e4b6b19.bindPopup(popup_56878b956534f3807c727b6779561304)
+        ;
+
+        
+    
+</script>
+</html>

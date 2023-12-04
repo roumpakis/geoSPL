@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+ <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:gdacs="http://www.gdacs.org/" xmlns:georss="http://www.georss.org/georss" xmlns:iwgsem="http://www.iwg-sem.org/"> <channel> <title>[EMSN177] </title>
+ <description>Copernicus EMS - Mapping Activation: production status</description>
+ <link>http://emergency.copernicus.eu/mapping/</link>
+ <atom:link rel="self" href="http://emergency.copernicus.eu/mapping/list-of-components/EMSN177/aemfeed" />
+ <language>en</language>
+ <category>copernicus</category>
+ <category>ems</category>
+ <category>emergency</category>
+ <category>mapping</category>
+ <image> <url>https://emergency.copernicus.eu/mapping/sites/all/themes/gmes960/images/Copernicus_w144.png</url>
+ <title>[EMSN177] </title>
+ <link>http://emergency.copernicus.eu/mapping/</link>
+ <description>Copernicus EMS - Mapping</description>
+</image>
+ <copyright>© European Union, 1995-</copyright>
+ <managingEditor>jrc-ems@ec.europa.eu (Copernicus EMS - Mapping)</managingEditor>
+ <webMaster>jrc-ems-rapidmapping@ec.europa.eu (Copernicus EMS - Mapping)</webMaster>
+ <generator>Copernicus EMS - Mapping Portal using Drupal</generator>
+ <ttl>10</ttl>
+</channel>
+</rss>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b6dfb3447d639cc4fc1cf907f2697a0a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_b6dfb3447d639cc4fc1cf907f2697a0a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b6dfb3447d639cc4fc1cf907f2697a0a = L.map(
+                "map_b6dfb3447d639cc4fc1cf907f2697a0a",
+                {
+                    center: [2.851868, 51.049652],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_179c734a946af61fe944965ee806642e = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+                tile_layer_179c734a946af61fe944965ee806642e.addTo(map_b6dfb3447d639cc4fc1cf907f2697a0a);
+    
+            var polygon_bd1b2264e8221dde7afb637fa07efb0b = L.polygon(
+                [[50.780343, 2.556036], [51.198548, 2.556036], [51.198548, 3.253858], [50.780343, 3.253858], [50.780343, 2.556036]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_b6dfb3447d639cc4fc1cf907f2697a0a);
+        
+    
+        var popup_d558578c53644b844790d0aecc2bd262 = L.popup({"maxWidth": 200});
+
+        
+            
+                var html_902f0d7b5c0ee55370a7a689f735fea3 = $(`<div id="html_902f0d7b5c0ee55370a7a689f735fea3" style="width: 100.0%; height: 100.0%;"><b>EMSR708 - Flood in Belgium</b><br><br>On 10 November 2023 between 6:00 and 12:00 UTC, a flood event is reported to have affected West Flanders, Belgium. The event is ongoing and spreading with damage expected to affect urban areas. Copernicus EMS Rapid Mapping is requested to provide flood extent.<br><br><b>Roads [km]:</b> 69<br><b>max_extent:</b> 17334.2<br><b>Built-up [No.]:</b> 138<br><b>Population [No.]:</b> 2850</div>`)[0];
+                popup_d558578c53644b844790d0aecc2bd262.setContent(html_902f0d7b5c0ee55370a7a689f735fea3);
+            
+        
+
+        polygon_bd1b2264e8221dde7afb637fa07efb0b.bindPopup(popup_d558578c53644b844790d0aecc2bd262)
+        ;
+
+        
+    
+    
+            var polygon_951240f21235bdcace98744e6d64b4f5 = L.polygon(
+                [[51.19114, 2.948037], [51.103982, 2.924712], [51.103949, 2.883717], [51.088359, 2.882577], [51.084747, 2.868625], [51.076509, 2.860133], [51.050402, 3.01954], [51.053542, 3.072851], [50.990478, 3.067083], [50.844129, 2.918674], [50.819879, 2.874075], [50.824553, 2.771104], [50.841086, 2.626191], [50.855003, 2.619564], [50.853922, 2.614969], [50.849687, 2.608734], [50.848393, 2.604098], [50.849171, 2.603428], [50.848423, 2.599856], [50.849858, 2.598819], [50.853279, 2.599139], [50.861013, 2.608846], [50.863228, 2.611625], [50.867686, 2.612305], [50.867966, 2.610992], [50.872582, 2.607278], [50.873911, 2.606156], [50.874865, 2.60629], [50.87558, 2.606464], [50.879727, 2.610225], [50.881382, 2.609569], [50.882427, 2.606603], [50.885727, 2.607078], [50.886521, 2.604383], [50.889557, 2.606506], [50.891033, 2.605978], [50.894534, 2.609365], [50.897415, 2.609314], [50.898232, 2.608997], [50.898766, 2.606678], [50.900257, 2.605533], [50.901779, 2.606297], [50.90469, 2.603814], [50.906338, 2.604694], [50.908299, 2.607297], [50.910015, 2.60792], [50.911282, 2.606653], [50.91269, 2.607036], [50.913933, 2.605033], [50.916401, 2.603661], [50.915005, 2.598925], [50.914551, 2.593528], [50.914718, 2.593268], [50.915303, 2.595554], [50.945705, 2.632968], [50.945946, 2.632617], [50.949261, 2.630617], [50.950344, 2.628483], [50.956349, 2.626103], [50.96011, 2.622442], [50.96748, 2.618708], [50.973595, 2.610761], [50.97498, 2.61185], [50.977896, 2.609642], [50.97937, 2.608525], [50.981098, 2.609031], [50.981919, 2.606536], [50.985638, 2.609556], [50.988766, 2.606858], [50.990418, 2.607075], [50.991005, 2.606289], [50.991226, 2.604922], [50.991403, 2.601211], [50.991627, 2.596492], [50.991917, 2.595164], [50.992829, 2.592742], [50.996826, 2.583394], [50.997406, 2.582315], [50.998971, 2.579708], [50.999867, 2.578217], [51.003372, 2.574019], [51.005914, 2.575085], [51.006781, 2.573877], [51.007889, 2.572333], [51.009609, 2.571614], [51.013085, 2.572456], [51.01405, 2.575892], [51.035906, 2.569179], [51.046028, 2.566069], [51.046273, 2.565999], [51.056843, 2.562952], [51.057156, 2.562862], [51.058413, 2.5625], [51.059029, 2.562322], [51.064312, 2.562869], [51.064595, 2.562688], [51.069691, 2.559417], [51.070038, 2.559194], [51.070355, 2.558979], [51.074672, 2.556036], [51.08591, 2.598619], [51.088168, 2.597512], [51.09574836730982, 2.6279074435476995], [51.113959, 2.622325], [51.16591, 2.775483], [51.194995, 2.85028], [51.198548, 2.876776], [51.19114, 2.948037]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_b6dfb3447d639cc4fc1cf907f2697a0a);
+        
+    
+        var popup_b6881b6118c447b3681379cf19126fa6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0dc73e27bf0f74814ea9a4300291909b = $(`<div id="html_0dc73e27bf0f74814ea9a4300291909b" style="width: 100.0%; height: 100.0%;">EMSR708-Westhoek</div>`)[0];
+                popup_b6881b6118c447b3681379cf19126fa6.setContent(html_0dc73e27bf0f74814ea9a4300291909b);
+            
+        
+
+        polygon_951240f21235bdcace98744e6d64b4f5.bindPopup(popup_b6881b6118c447b3681379cf19126fa6)
+        ;
+
+        
+    
+    
+            var polygon_25914540cd0f39c490a40f2108e18b24 = L.polygon(
+                [[50.941524, 3.188927], [50.936591, 3.213959], [50.931081, 3.231426], [50.924913, 3.242762], [50.915956, 3.244186], [50.909639, 3.222805], [50.917204, 3.17094], [50.918353, 3.162729], [50.929278, 3.154902], [50.946534, 3.161281], [50.941524, 3.188927]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_b6dfb3447d639cc4fc1cf907f2697a0a);
+        
+    
+        var popup_c59864d6659db96e30c63844119fa9f3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1b6df6fdd93202749d7a9a88c5598ee2 = $(`<div id="html_1b6df6fdd93202749d7a9a88c5598ee2" style="width: 100.0%; height: 100.0%;">EMSR708-Kachtem</div>`)[0];
+                popup_c59864d6659db96e30c63844119fa9f3.setContent(html_1b6df6fdd93202749d7a9a88c5598ee2);
+            
+        
+
+        polygon_25914540cd0f39c490a40f2108e18b24.bindPopup(popup_c59864d6659db96e30c63844119fa9f3)
+        ;
+
+        
+    
+    
+            var polygon_61fc8f8f38d0e420e11f322788a307bf = L.polygon(
+                [[50.856069, 3.049686], [50.876284, 3.02864], [50.902804, 3.042918], [50.904447, 3.086997], [50.885743, 3.172573], [50.81368, 3.251352], [50.812296, 3.253858], [50.780343, 3.193467], [50.856069, 3.049686]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_b6dfb3447d639cc4fc1cf907f2697a0a);
+        
+    
+        var popup_a86a59bf0f26325844a5fb598297d6f1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_21c81370f0203b70bbc88e4b2d8bb0c0 = $(`<div id="html_21c81370f0203b70bbc88e4b2d8bb0c0" style="width: 100.0%; height: 100.0%;">EMSR708-Moorsele Wevelgem</div>`)[0];
+                popup_a86a59bf0f26325844a5fb598297d6f1.setContent(html_21c81370f0203b70bbc88e4b2d8bb0c0);
+            
+        
+
+        polygon_61fc8f8f38d0e420e11f322788a307bf.bindPopup(popup_a86a59bf0f26325844a5fb598297d6f1)
+        ;
+
+        
+    
+</script>
+</html>

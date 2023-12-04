@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geospatial Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        /* Dark theme for the menu */
+        .navbar {
+            background-color: #333;
+            border-color: #555;
+        }
+
+        .navbar-default .navbar-brand,
+        .navbar-default .navbar-nav > li > a {
+            color: #fff;
+        }
+
+        .navbar-default .navbar-nav > li > a:hover,
+        .navbar-default .navbar-nav > li > a:focus {
+            background-color: #555;
+            color: #fff;
+        }
+
+        .navbar-default .navbar-nav .active > a,
+        .navbar-default .navbar-nav .active > a:hover,
+        .navbar-default .navbar-nav .active > a:focus {
+            background-color: #555;
+            color: #fff;
+        }
+
+        .navbar-default .navbar-nav > li > a:focus,
+        .navbar-default .navbar-nav > li > a:hover {
+            color: #fff;
+        }
+
+        .navbar-default .navbar-toggle {
+            border-color: #ddd;
+        }
+
+        .navbar-default .navbar-toggle:hover,
+        .navbar-default .navbar-toggle:focus {
+            background-color: #ddd;
+        }
+
+        .navbar-default .navbar-toggle .icon-bar {
+            background-color: #ccc;
+        }
+
+        /* Add custom CSS to make the images cover the whole page */
+        .image {
+            width: 100%;
+        }
+
+        /* Set a maximum width for the map container */
+        #map {
+            max-width: 100%;
+        }
+
+        .card {
+            width: 50%;
+            float: left;
+            box-sizing: border-box;
+        }
+
+        /* Added space between badges and information */
+        .badge-info {
+            margin-right: 10px;
+        }
+
+        /* Removed styling for range input and fetch button */
+        .container input[type=range],
+        .container button {
+            display: none;
+        }
+        
+        /* Added style for extra info */
+        .extra-info {
+            color: #777; /* Adjust color as needed */
+        }
+		/* Add this to your existing CSS or in a new CSS file */
+		.footer {
+			background-color: #343a40; /* Dark background color */
+			padding: 20px 0; /* Adjust the padding as needed */
+		}
+
+		.footer p,
+		.footer a {
+			color: #ffffff; /* Text color */
+		}
+
+		.footer a:hover {
+			text-decoration: underline; /* Underline on hover */
+		}
+
+		/* Add background image to the footer */
+		.footer {
+			
+			background-size: cover;
+			background-position: center;
+		}
+		/* Add this to your CSS file */
+		.scaled-image {
+			width: 154%;
+			height: auto;
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand"  href="#">Home</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Dashboard</a></li>
+				<li>				<a class="navbar-brand"  href="{{url_for('rapid_mapping') }}">Rapid Mapping</a><li>
+								
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" data-toggle="modal" data-target="#helpModal">Help</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row">
+        <div class="col-lg-8">
+            <div id="map">{{ map_html|safe }}</div>
+        </div>
+        <div class="col-lg-2">
+            <h2 class="extra-info">Extra Information</h2>
+            <!-- Add your content for extra information here -->
+        </div>
+        <div class="col-lg-2">
+            <h2>Detected</h2>
+            <a href="#">
+                Fire <span class="badge badge-info">5</span>
+                <span class="extra-info">Information1</span>
+            </a><br>
+            <a href="#">
+                Flood <span class="badge badge-info">10</span>
+                <span class="extra-info">Information2</span>
+            </a><br>
+            <a href="#">
+                ETC <span class="badge badge-info">2</span>
+                <span class="extra-info">Information3</span>
+            </a>
+        </div>
+    </div>
+
+    
+
+    <div class="row" id="image-card-group">
+        <!-- Your existing code for image cards here -->
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="row">
+                <div class="container">
+                    <input type="range" min="1" max="100" value="50" class="slider" name="slider" id="slider2">
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="row">
+                <div class="container">
+                    <button id="fetchImagesButton" class="btn btn-primary">Fetch Images</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Coords</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in event_list %}
+                <tr>
+                    <td><strong>{{ item['id'] }}</strong></td>
+                    <td>{{ item['title'] }}</td>
+                    <td>{{ item['coords'] }}</td>
+                    <td>
+                        <button type="button" class="btn btn-info btn-sm" onclick="viewDetails('{{ item['id'] }}')">View More</button>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+<!-- Footer Section -->
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+		            <div class="col-md-2">
+		<img class="scaled-image" src="{{ url_for('static', filename='images/logo.png') }}" alt="Your Image">
+            </div>
+			<br>
+            <div class="col-md-6">
+					<br> <br>
+                <p class="text-light">© 2023 SPL-ICS-FORTH. All rights reserved.</p>
+            </div>
+            <div class="col-md-4 text-right">
+					<br> <br>
+                <a href="#" class="text-light">Privacy Policy</a> | <a href="#" class="text-light">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <script>
+        function viewDetails(id) {
+            window.location.href = `/event?event_id=${id}`;
+        }
+    </script>
+
+    <!-- Add Bootstrap JS and Popper.js scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    <!-- Initialize the Bootstrap Multiselect plugin -->
+    <script>
+        $(document).ready(function() {
+            $('#disasterList').multiselect({
+                enableClickableOptGroups: true,
+                includeSelectAllOption: true
+            });
+        });
+    </script>
+
+    <!-- Help Modal -->
+    <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="helpModalLabel">Help</h4>
+                </div>
+                <div class="modal-body">
+                    <!-- Add your help content here -->
+                    <p>This is some help content.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

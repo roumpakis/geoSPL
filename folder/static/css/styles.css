@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.dashboard-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+#map {
+    width: 70%;
+    background-color: #fff; /* Placeholder background for the map */
+}
+
+#image-panel {
+    width: 28%;
+    background-color: #fff; /* Placeholder background for the image panel */
+    padding: 10px;
+    box-shadow: 2px 2px 5px #888;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image {
+    width: 28; /* Adjust the width as needed */
+}
+
+.container {
+    position: relative;
+}
+
+.slider {
+    width: 100%;
+    height: auto;
+    
+}
+
+#fetchImagesButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#map {
+    width: 80%;
+    
+}
+        .image {
+            width: 100%;
+        }
+        /* Set a maximum width for the map container */
+        #map {
+            max-width: 100%; /* You can adjust the value as needed */
+        }
+
+        /* Style for input panel columns */
+        .input-panel {
+            background-color: #f8f9fa; /* Light gray background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+        }
+
+        /* Style for detected column */
+        #detectedColumn {
+            background-color: #e9ecef; /* Lighter gray background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+        }
+
+        /* Style for card group */
+        #image-card-group {
+            margin-top: 20px;
+        }
+
+        /* Style for slider container */
+        #slider-container {
+            margin-top: 20px;
+        }
+
+        /* Style for fetch images button */
+        #fetchImagesButton {
+            margin-top: 20px;
+        }
+		
+		
+	.success-message {
+    color: green;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.error-message {
+    color: white;
+    background-color: #dc3545;
+    border-color: #dc3545;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+	
